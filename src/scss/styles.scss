@@ -1,18 +1,35 @@
 @import './header.scss';
-@import './vite-promo.scss';
+@import './mobile-menu.scss';
+
+@import './home.scss';
+@import './how-it-started.scss';
+@import './features.scss';
+@import './fashion-and-beauty.scss';
+@import './gallery.scss';
+@import './reviews.scss';
+@import './download.scss';
+
+@import './footer.scss';
+@import './cookies.scss';
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+  font-family: $font-family;
+  font-size: $font-size-main-mob;
+  font-weight: $regular;
+  color: $main-color;
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+  @include media(desktop) {
+    font-size: $font-size-main-des;
+  }
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+.container {
+  min-width: $mobile;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include media(desktop) {
+    max-width: $desktop;
+    padding: 0 56px;
+  }
 }
