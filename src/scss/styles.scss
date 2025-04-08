@@ -9,17 +9,21 @@
 @import './reviews.scss';
 @import './download.scss';
 
+@import './privacy-policy.scss';
+@import './terms-conditions.scss';
+@import './cookies-policy.scss';
+
 @import './footer.scss';
 @import './cookies.scss';
 
 :root {
   font-family: $font-family;
-  font-size: $font-size-main-mob;
+  font-size: $font-size-main-12;
   font-weight: $regular;
   color: $main-color;
 
   @include media(desktop) {
-    font-size: $font-size-main-des;
+    font-size: $font-size-main-16;
   }
 }
 

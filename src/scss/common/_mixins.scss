@@ -13,10 +13,17 @@
   }
 }
 
-@mixin font($_fsz, $_lnh) {
-  font-size: #{$_fsz}px;
+@mixin font($size, $weight, $height, $text-align: center, $color) {
+  font-size: #{$size}px;
+  font-weight: $weight;
+  line-height: #{$height}px;
+  text-align: $text-align;
+  color: $color;
+}
 
-  $result: math.div($_lnh, $_fsz);
-
-  line-height: math.div(math.round($result * 100), 100);
+@mixin background($url, $position, $size: cover) {
+  background-image: url($url);
+  background-position: $position;
+  background-size: $size;
+  background-repeat: no-repeat;
 }

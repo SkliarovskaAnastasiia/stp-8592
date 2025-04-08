@@ -6,8 +6,11 @@ $regular: 400;
 $medium: 500;
 $bold: 600;
 
-$font-size-main-mob: 12px;
-$font-size-main-des: 16px;
+$font-size-12: 12px;
+$font-size-16: 16px;
+$font-size-20: 20px;
+$font-size-24: 24px;
+$font-size-32: 32px;
 
 // Colors
 $main-color: #252525;
@@ -15,3 +18,17 @@ $light-color: #3c3c3c;
 $violet: #593979;
 $light-violet: #e6c3ff;
 $pink: #fec0f2;
+
+// Paddings
+$section-paddings-mob: 24px 0;
+$section-paddings-des: 24px 0;
+
+$btn-paddings: 10px 20px;
+
+// Common Margins
+$margin-8: 8px;
+$margin-12: 12px;
+$margin-16: 16px;
+$margin-24: 24px;
+$margin-20: 20px;
+$margin-32: 32px;
