@@ -1,0 +1,44 @@
+.home {
+  padding-top: 106px;
+  padding-bottom: $section-paddings-mob;
+  @include background($bg-print-1x, center);
+
+  @media screen and (min-resolution: 192dpi) {
+    @include background($bg-print-2x, center);
+  }
+
+  @include media(desktop) {
+    padding-top: 289px;
+    padding-bottom: $section-paddings-des;
+  }
+}
+
+.home-title {
+  margin-bottom: 16px;
+  font-family: $second-f;
+  @include font($fz32, $regular, 1.16, center);
+  color: transparent;
+  background: linear-gradient(90deg, #4c1c7d 0%, #832192 50%, #4c1c7d 100%);
+  background-clip: text;
+}
+
+.home-text {
+  margin-bottom: 16px;
+  @include font($fz16, $regular, 1.2, center);
+  color: $main-color;
+}
+
+.home-btn-download {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  width: 150px;
+  height: 45px;
+  background: linear-gradient(90deg, #4c1c7d 0%, #832192 50%, #4c1c7d 100%);
+
+  .home-icon {
+    width: 26px;
+    height: 29px;
+  }
+}

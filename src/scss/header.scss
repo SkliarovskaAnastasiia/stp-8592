@@ -93,7 +93,7 @@
   color: none;
   cursor: pointer;
 
-  .icon {
+  .header-icon {
     width: 39px;
     height: 39px;
   }
@@ -115,7 +115,7 @@
   }
 }
 
-.btn-download {
+.header-btn-download {
   display: none;
 
   @include media(desktop) {
