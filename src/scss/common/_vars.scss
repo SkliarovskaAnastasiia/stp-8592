@@ -18,8 +18,18 @@ $light-color: #3c3c3c;
 $violet: #593979;
 $light-violet: #e6c3ff;
 $pink: #fec0f2;
-$heder-bg: #ebcfff;
+$header-bg: #ebcfff;
+$header-border: linear-gradient(180deg, #f5ecfd 0%, #dbb9f8 100%);
+$header-burger-icon: linear-gradient(
+  to right,
+  #592193 0%,
+  #bb2fd0 50%,
+  #592193 100%
+);
+
 $btn-bg: linear-gradient(180deg, #dbb9f8 0%, #cea2f6 100%);
+$btn-bg-hover: linear-gradient(180deg, #e7c9fb 0%, #d8a9f9 100%);
+$btn-bg-active: linear-gradient(180deg, #bf94ea 0%, #ae80e5 100%);
 
 // Paddings
 $section-paddings-mob: 24px;
