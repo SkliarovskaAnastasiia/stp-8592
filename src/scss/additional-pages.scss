@@ -1,0 +1,116 @@
+// Common styles for all pages
+.page-header {
+  background-color: $heder-bg;
+  border-radius: 32px;
+  padding: 8px 16px;
+  width: 280px;
+
+  position: fixed;
+  top: 11px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include media(desktop) {
+    padding: 16px 32px;
+    width: 1088px;
+    top: 40px;
+  }
+
+  .back-link {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+
+    .back-link-text {
+      font-family: $first-f;
+      @include font(14px, $regular, 2.14);
+
+      @include media(desktop) {
+        @include font($fz20, $regular, 1.5);
+      }
+    }
+  }
+}
+
+.page-content {
+  @include background($bg-gradient-1x, center);
+
+  @media screen and (min-resolution: 192pdi) {
+    @include background($bg-gradient-2x, center);
+  }
+
+  padding-top: 74px;
+  padding-bottom: 20px;
+  color: #000000;
+
+  @include media(desktop) {
+    padding-top: 126px;
+    padding-bottom: 40px;
+  }
+
+  .page-title {
+    font-family: $second-f;
+    @include font($fz32, $regular, 1.88, start);
+    margin-bottom: 16px;
+
+    @include media(desktop) {
+      @include font(48px, $regular, 0.63, start);
+      margin-bottom: 40px;
+    }
+  }
+
+  .text-block:not(:last-child) {
+    margin-bottom: 12px;
+
+    @include media(desktop) {
+      margin-bottom: 32px;
+    }
+  }
+
+  .regular-text {
+    @include font($fz12, $regular, 1.33, start);
+
+    @include media(desktop) {
+      @include font($fz20, $regular, 1.5, start);
+    }
+  }
+
+  .regular-text.mg,
+  .text-block-subtitle.mb {
+    margin-bottom: 5.33px;
+
+    @include media(desktop) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .text-block-title {
+    font-family: $second-f;
+    @include font($fz20, $regular, 1.2, start);
+    margin-bottom: 8px;
+
+    @include media(desktop) {
+      @include font($fz32, $regular, normal, start);
+      margin-bottom: 20px;
+    }
+  }
+
+  .text-block-subtitle {
+    font-family: $second-f;
+    @include font(14px, $regular, 1.29, start);
+
+    @include media(desktop) {
+      @include font($fz24, $regular, normal, start);
+    }
+  }
+}
+
+// Cookies
+
+.regular-text.intext:not(:last-child) {
+  margin-bottom: 8px;
+
+  @include media(desktop) {
+    margin-bottom: 32px;
+  }
+}
