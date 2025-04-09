@@ -16,7 +16,7 @@
 @mixin font($size, $weight, $height, $text-align: center, $color) {
   font-size: #{$size}px;
   font-weight: $weight;
-  line-height: #{$height}px;
+  line-height: $height;
   text-align: $text-align;
   color: $color;
 }
