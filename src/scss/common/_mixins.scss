@@ -13,18 +13,11 @@
   }
 }
 
-@mixin font(
-  $size,
-  $weight: $regular,
-  $height: normal,
-  $text-align: center,
-  $color: $main-color
-) {
+@mixin font($size, $weight: $regular, $height: normal, $text-align: center) {
   font-size: $size;
   font-weight: $weight;
   line-height: $height;
   text-align: $text-align;
-  color: $color;
 }
 
 @mixin background($url, $position, $size: cover) {

@@ -1,0 +1,80 @@
+.how-it-all-started {
+  padding-top: $section-paddings-mob;
+  padding-bottom: $section-paddings-mob;
+
+  @include background($bg-gradient-1x, center);
+
+  @media screen and (min-resolution: 192dpi) {
+    @include background($bg-gradient-2x, center);
+  }
+
+  @include media(desktop) {
+    padding-top: $section-paddings-des;
+    padding-bottom: $section-paddings-des;
+  }
+
+  .how-it-all-started-title {
+    @include font($fz24, $regular, normal, center);
+    margin-bottom: 20px;
+
+    @include media(desktop) {
+      @include font(36px, $regular, normal, center);
+      margin-bottom: 56px;
+    }
+  }
+
+  .how-it-started-wr {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+
+    @include media(desktop) {
+      flex-direction: row;
+      gap: 91px;
+      align-items: center;
+    }
+
+    .how-it-started-img {
+      border-radius: 24px;
+      margin: 0 auto;
+
+      @include media(desktop) {
+        border-radius: 100px;
+        margin: 0;
+      }
+    }
+
+    .how-it-all-started-text-wr {
+      @include media(desktop) {
+        max-width: 625px;
+      }
+
+      .how-it-all-started-subtitle {
+        @include font($fz20, $regular, 1.2, center);
+        margin-bottom: 12px;
+
+        @include media(desktop) {
+          @include font($fz32, $regular, 1.2, start);
+          margin-bottom: 24px;
+        }
+      }
+
+      .how-it-all-started-text-big {
+        @include font($fz16, $regular, 1.25);
+        margin-bottom: 8px;
+
+        @include media(desktop) {
+          @include font(fz24, $regular, 1.2, start);
+          margin-bottom: 16px;
+        }
+      }
+
+      .how-it-all-started-text {
+        @include media(desktop) {
+          text-align: start;
+          max-width: 567px;
+        }
+      }
+    }
+  }
+}
