@@ -1,0 +1,48 @@
+.footer {
+  padding-top: 26px;
+  padding-bottom: 44px;
+
+  @include background($bg-print-1x, center);
+  @media screen and (min-resolution: 192dpi) {
+    @include background($bg-print-2x, center);
+  }
+
+  @include media(desktop) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .footer-logo {
+    width: fit-content;
+    display: block;
+    margin: 0 auto 20px;
+
+    @include media(desktop) {
+      margin-bottom: 32px;
+    }
+  }
+
+  .pages-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 3px;
+    margin-bottom: 27px;
+
+    @include font(14px);
+
+    @include media(desktop) {
+      @include font(20px);
+    }
+  }
+
+  .copyright-text {
+    color: $light-color;
+    max-width: 220px;
+    margin: 0 auto;
+
+    @include media(desktop) {
+      max-width: 429px;
+    }
+  }
+}

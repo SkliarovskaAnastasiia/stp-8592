@@ -1,3 +1,40 @@
-<footer>
-  <div class="container"></div>
+<footer class="container footer">
+  <a href="/index.html" class="footer-logo">
+    <picture
+      ><source
+        srcset="
+          /images/footer/desktop/logo.png    1x,
+          /images/footer/desktop/logo@2x.png 2x
+        "
+        media="(min-width: 1200px)"
+        width="69"
+        height="69"
+      />
+      <source
+        srcset="
+          /images/footer/mobile/logo.png    1x,
+          /images/footer/mobile/logo@2x.png 2x
+        "
+        media="(min-width: 320px)"
+        width="55"
+        height="55"
+      />
+      <img src="/images/footer/mobile/logo.png" alt="footer logo" />
+    </picture>
+  </a>
+  <ul class="pages-list">
+    <li class="pages-list-item">
+      <a href="/privacy-policy.html">Privacy Policy |</a>
+    </li>
+    <li class="pages-list-item">
+      <a href="/terms-conditions.html">Terms & Conditions |</a>
+    </li>
+    <li class="pages-list-item">
+      <a href="/cookies-policy.html">Cookies Policy</a>
+    </li>
+  </ul>
+
+  <p class="copyright-text">
+    Copyright: &copy;2025 magicmatch.site, All rights reserved
+  </p>
 </footer>
