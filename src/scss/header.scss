@@ -1,0 +1,39 @@
+.header * {
+  outline: 1px solid red;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  border-radius: 32px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background-color: $heder-bg;
+}
+
+.header-logo {
+  display: block;
+  width: 69px;
+  height: 69px;
+  border-radius: 8.625px;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.nav-list {
+  display: flex;
+  gap: $margin-24;
+  color: $main-color;
+  font-family: $font-family;
+}
+
+.btn-download {
+  border-radius: 16px;
+}

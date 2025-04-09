@@ -3,12 +3,10 @@ const breakpointsStyles = '@import "./src/scss/common/_breakpoints.scss"';
 const mixinsStyles = '@import "./src/scss/common/_mixins.scss"';
 const baseStyles = '@import "./src/scss/common/_base.scss"';
 const resetStyles = '@import "./src/scss/common/_reset.scss"';
-const mainStyles = '@import "./src/scss/styles.scss"';
 
 const styles = [
   variablesStyles,
   breakpointsStyles,
-  //   colorsStyles,
   mixinsStyles,
   baseStyles,
   resetStyles,
