@@ -16,15 +16,6 @@
 @import './footer.scss';
 @import './cookies.scss';
 
-:root {
-  font-family: $font-family;
-  @include font($font-size-main-12, $regular, 1.5, $main-color);
-
-  @include media(desktop) {
-    font-size: $font-size-main-16;
-  }
-}
-
 body {
   background-image: linear-gradient(
     90deg,
@@ -32,6 +23,12 @@ body {
     #fef9ff 50%,
     #ebd8ff 100%
   );
+  font-family: $font-family;
+  @include font($font-size-main-12, $regular, $main-color);
+
+  @include media(desktop) {
+    @include font($font-size-main-16, $regular, $main-color);
+  }
 }
 
 .container {
