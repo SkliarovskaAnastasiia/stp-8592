@@ -14,11 +14,11 @@
   }
 
   .how-it-all-started-title {
-    @include font(24px, $regular, normal, center, transparent);
+    @include font($fz24, $regular, normal, center);
     margin-bottom: 20px;
 
     @include media(desktop) {
-      @include font(36px, $regular, normal, center, transparent);
+      @include font(36px, $regular, normal, center);
       margin-bottom: 56px;
     }
   }
@@ -50,21 +50,21 @@
       }
 
       .how-it-all-started-subtitle {
-        @include font(20px, $regular, 1.2, center, transparent);
+        @include font($fz20, $regular, 1.2, center);
         margin-bottom: 12px;
 
         @include media(desktop) {
-          @include font(32px, $regular, 1.2, start, transparent);
+          @include font($fz32, $regular, 1.2, start);
           margin-bottom: 24px;
         }
       }
 
       .how-it-all-started-text-big {
-        @include font(16px, $regular, 1.25);
+        @include font($fz16, $regular, 1.25);
         margin-bottom: 8px;
 
         @include media(desktop) {
-          @include font(24px, $regular, 1.2, start);
+          @include font(fz24, $regular, 1.2, start);
           margin-bottom: 16px;
         }
       }

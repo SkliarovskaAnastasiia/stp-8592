@@ -2,6 +2,7 @@ body {
   min-height: 100vh;
   background-image: $page-bg;
   font-family: $first-f;
+  color: $main-color;
 
   @include font($fz12);
 
@@ -30,6 +31,7 @@ body {
 
 .gradient-subtitle {
   font-family: $second-f;
+  color: transparent;
   background: linear-gradient(90deg, #592193 0%, #bb2fd0 50%, #592193 100%);
   background-clip: text;
 }
