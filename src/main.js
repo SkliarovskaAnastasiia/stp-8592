@@ -1,3 +1,5 @@
+import '../src/scss/styles.scss';
+
 import './js/mobileMenu';
 import './js/gallery';
 import './js/reviews';

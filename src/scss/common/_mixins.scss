@@ -13,8 +13,14 @@
   }
 }
 
-@mixin font($size, $weight, $height: normal, $text-align: center, $color) {
-  font-size: #{$size}px;
+@mixin font(
+  $size,
+  $weight: $regular,
+  $height: normal,
+  $text-align: center,
+  $color: $main-color
+) {
+  font-size: $size;
   font-weight: $weight;
   line-height: $height;
   text-align: $text-align;
