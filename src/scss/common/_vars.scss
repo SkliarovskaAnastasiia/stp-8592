@@ -1,16 +1,16 @@
 // Fonts
-$font-family: 'Poppins', sans-serif;
-$second-family: 'Abril Fatface', sans-serif;
+$first-f: 'Poppins', sans-serif;
+$second-f: 'Abril Fatface', sans-serif;
 
 $regular: 400;
 $medium: 500;
 $bold: 600;
 
-$font-size-12: 12px;
-$font-size-16: 16px;
-$font-size-20: 20px;
-$font-size-24: 24px;
-$font-size-32: 32px;
+$fz12: 12px;
+$fz16: 16px;
+$z20: 20px;
+$fz24: 24px;
+$fz32: 32px;
 
 // Colors
 $main-color: #252525;
@@ -20,25 +20,25 @@ $light-violet: #e6c3ff;
 $pink: #fec0f2;
 
 // Paddings
-$section-paddings-mob: 24px 0;
-$section-paddings-des: 24px 0;
+$section-paddings-mob: 24px;
+$section-paddings-des: 80px;
 
 $btn-paddings: 10px 20px;
 
 // Common Margins
-$margin-8: 8px;
-$margin-12: 12px;
-$margin-16: 16px;
-$margin-24: 24px;
-$margin-20: 20px;
-$margin-32: 32px;
+$mg8: 8px;
+$mg12: 12px;
+$mg16: 16px;
+$mg24: 24px;
+$mg20: 20px;
+$mg32: 32px;
 
 // Backgrounds
-$bg-print-1x: '/src/images/backgrounds/desktop/01.jpg';
-$bg-print-2x: '/src/images/backgrounds/desktop/01@2x.jpg';
-$bg-gradient-1x: '/src/images/backgrounds/desktop/02.jpg';
-$bg-gradient-2x: '/src/images/backgrounds/desktop/02@2x.jpg';
-$bg-wavy-1x: '/src/images/backgrounds/desktop/03.jpg';
-$bg-wavy-2x: '/src/images/backgrounds/desktop/03@2x.jpg';
+$bg-print-1x: '../images/backgrounds/desktop/01.jpg';
+$bg-print-2x: '../images/backgrounds/desktop/01@2x.jpg';
+$bg-gradient-1x: '../images/backgrounds/desktop/02.jpg';
+$bg-gradient-2x: '../images/backgrounds/desktop/02@2x.jpg';
+$bg-wavy-1x: '../images/backgrounds/desktop/03.jpg';
+$bg-wavy-2x: '../images/backgrounds/desktop/03@2x.jpg';
 
 $page-bg: linear-gradient(90deg, #ebd8ff 0%, #fef9ff 50%, #ebd8ff 100%);
