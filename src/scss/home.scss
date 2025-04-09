@@ -16,7 +16,7 @@
 .home-title {
   margin-bottom: 16px;
   font-family: $second-f;
-  @include font($fz32, $regular, 1.2);
+  @include font($fz32, $regular, 1.16, center);
   color: transparent;
   background: linear-gradient(90deg, #4c1c7d 0%, #832192 50%, #4c1c7d 100%);
   background-clip: text;
