@@ -22,48 +22,59 @@
       rel="stylesheet"
     />
     <script type="module" crossorigin src="/stp-8592/commonHelpers2.js"></script>
-    <link rel="stylesheet" href="/stp-8592/assets/index-ffc715a0.css">
+    <link rel="stylesheet" href="/stp-8592/assets/index-34b904ab.css">
   </head>
   <body>
     <header class="header">
-  <div class="container header-container">
-    <a href="/" class="header-logo" aria-label="Home">
-      <picture>
-        <source
-          srcset="
-            ../images/header/mobile/logo.png    1x,
-            ../images/header/mobile/logo@2x.png 2x
-          "
-          media="(max-width: 1199px)"
-        />
-        <source
-          srcset="
-            ../images/header/desktop/logo.png    1x,
-            ../images/header/desktop/logo@2x.png 2x
-          "
-          media="(min-width: 1200px)"
-        />
-        <img src="../images/header/desktop/logo.png" alt="Site Logo" />
-      </picture>
-    </a>
+  <div class="container">
+    <div class="header-wrapper">
+      <div class="header-content">
+        <a href="/" class="header-logo" aria-label="Home">
+          <picture>
+            <source
+              srcset="
+                ../images/header/mobile/logo.png    1x,
+                ../images/header/mobile/logo@2x.png 2x
+              "
+              media="(max-width: 1199px)"
+            />
+            <source
+              srcset="
+                ../images/header/desktop/logo.png    1x,
+                ../images/header/desktop/logo@2x.png 2x
+              "
+              media="(min-width: 1200px)"
+            />
+            <img src="../images/header/desktop/logo.png" alt="Site Logo" />
+          </picture>
+        </a>
 
-    <!-- Center: Navigation links -->
-    <nav class="header-nav">
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a href="#how-it-started">How It All Started</a>
-        </li>
-        <li class="nav-item"><a href="#features">Features</a></li>
-        <li class="nav-item">
-          <a href="#fashion-and-beauty">Fashion &amp; Beauty</a>
-        </li>
-        <li class="nav-item"><a href="#gallery">Gallery</a></li>
-        <li class="nav-item"><a href="#reviews">Reviews</a></li>
-      </ul>
-    </nav>
+        <!-- Center: Navigation links -->
+        <nav class="header-nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#how-it-started">How It All Started</a>
+            </li>
+            <li class="nav-item"><a href="#features">Features</a></li>
+            <li class="nav-item">
+              <a href="#fashion-and-beauty">Fashion &amp; Beauty</a>
+            </li>
+            <li class="nav-item"><a href="#gallery">Gallery</a></li>
+            <li class="nav-item"><a href="#reviews">Reviews</a></li>
+          </ul>
+        </nav>
 
-    <!-- Right: Download button -->
-    <a href="#download" class="btn-download">Download</a>
+        <!-- Right: Download button -->
+        <a href="#download" class="btn-download">Download</a>
+
+        <!-- Burger mobile menu -->
+        <button class="header-mobile-menu" aria-label="Toggle mobile menu">
+          <svg class="icon icon-burger" aria-hidden="true">
+            <use href="../images/sprite.svg#icon-burger"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
 </header>
 
