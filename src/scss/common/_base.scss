@@ -1,0 +1,22 @@
+body {
+  min-height: 100vh;
+  background-image: $page-bg;
+  font-family: $font-family;
+
+  @include font($font-size-12);
+
+  @include media(desktop) {
+    @include font($font-size-16);
+  }
+}
+
+.container {
+  min-width: $mobile;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include media(desktop) {
+    max-width: $desktop;
+    padding: 0 56px;
+  }
+}
