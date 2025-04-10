@@ -1,140 +1,143 @@
-.header * {
-  // outline: 1px solid red;
-}
-
 .header {
   position: fixed;
   width: 100%;
   top: 4px;
   left: 0;
   z-index: 100;
-}
 
-.header-container {
-  max-width: $mobile;
-  margin: 0 auto;
-  padding: 0 20px;
-
-  @include media(desktop) {
-    max-width: $desktop;
-    padding: 0 56px;
-  }
-}
-
-.header-wrapper {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4px 16px;
-  background-color: $header-bg;
-  border-radius: 16px;
-
-  @include media(desktop) {
-    padding: 4px 32px;
-    border-radius: 32px;
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    width: 100.5%;
-    height: 104%;
-    border-radius: 16px;
-    background-image: $header-border;
-    z-index: -1;
+  &__container {
+    max-width: $mobile;
+    margin: 0 auto;
+    padding: 0 20px;
 
     @include media(desktop) {
-      border-radius: 32px;
-      width: 100.4%;
-      height: 106%;
+      max-width: $desktop;
+      padding: 0 56px;
     }
   }
-}
 
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: $mobile;
-
-  @include media(desktop) {
-    max-width: none;
-  }
-}
-
-.header-logo {
-  display: block;
-  width: 55px;
-  height: 55px;
-  border-radius: 8.44px;
-  overflow: hidden;
-
-  @include media(desktop) {
-    width: 69px;
-    height: 69px;
-  }
-
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-}
-
-.header-mobile-menu {
-  display: flex;
-  background: transparent;
-  border: none;
-  align-items: center;
-  padding: 0;
-  color: none;
-  cursor: pointer;
-
-  .header-icon {
-    width: 39px;
-    height: 39px;
-  }
-
-  @include media(desktop) {
-    display: none;
-  }
-}
-
-.nav-list {
-  display: none;
-
-  @include media(desktop) {
-    display: flex;
-    gap: $mg24;
-    color: $main-color;
-    font-family: $first-f;
-    @include font($fz16, $regular, 1.5, center);
-  }
-}
-
-.header-btn-download {
-  display: none;
-
-  @include media(desktop) {
+  &__wrapper {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 4px 16px;
+    background-color: $header-bg;
     border-radius: 16px;
-    padding: $btn-paddings;
-    color: $main-color;
-    @include font($fz16, $bold, 1.2, center);
-    background: $btn-bg;
-    cursor: pointer;
-    transition: background 0.3s ease;
 
-    &:hover {
-      background: $btn-bg-hover;
+    @include media(desktop) {
+      padding: 4px 32px;
+      border-radius: 32px;
     }
 
-    &:active {
-      background: $btn-bg-active;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100.5%;
+      height: 104%;
+      border-radius: 16px;
+      background-image: $header-border;
+      z-index: -1;
+
+      @include media(desktop) {
+        border-radius: 32px;
+        width: 100.4%;
+        height: 106%;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: $mobile;
+
+    @include media(desktop) {
+      max-width: none;
+    }
+  }
+
+  &__logo {
+    display: block;
+    width: 55px;
+    height: 55px;
+    border-radius: 8.44px;
+    overflow: hidden;
+
+    @include media(desktop) {
+      width: 69px;
+      height: 69px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__nav {
+    text-align: center;
+  }
+
+  &__nav-list {
+    display: none;
+
+    @include media(desktop) {
+      display: flex;
+      gap: $mg24;
+      color: $main-color;
+      font-family: $first-f;
+      @include font($fz16, $regular, 1.5, center);
+    }
+  }
+
+  &__nav-item {
+    text-align: center;
+  }
+
+  &__btn-download {
+    display: none;
+
+    @include media(desktop) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 16px;
+      padding: $btn-paddings;
+      color: $main-color;
+      @include font($fz16, $bold, 1.2, center);
+      background: $btn-bg;
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: $btn-bg-hover;
+      }
+
+      &:active {
+        background: $btn-bg-active;
+      }
+    }
+  }
+
+  &__mobile-menu {
+    display: flex;
+    background: transparent;
+    border: none;
+    align-items: center;
+    padding: 0;
+    cursor: pointer;
+
+    &-icon {
+      width: 39px;
+      height: 39px;
+    }
+
+    @include media(desktop) {
+      display: none;
     }
   }
 }
