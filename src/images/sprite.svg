@@ -1,6 +1,6 @@
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
-    <symbol id="icon-angle-left-b" viewBox="0 0 32 32">
+    <symbol id="icon-angle-left-b" viewBox="0 0 24 24">
       <path d="M8.4998 11.3L14.0998 5.6C14.4998 5.2 15.0998 5.2 15.4998 5.6C15.8998 6 15.8998 6.6 15.4998 7L10.5998 11.9L15.4998 16.8C15.6998 17 15.7998 17.2 15.7998 17.5C15.7998 18.1 15.3998 18.5 14.7998 18.5C14.4998 18.5 14.2998 18.4 14.0998 18.2L8.3998 12.5C8.0998 12.3 8.0998 11.7 8.4998 11.3Z" fill="url(#paint0_linear_399_595)" />
       <defs>
         <linearGradient id="paint0_linear_399_595" x1="15.7998" y1="11.9" x2="8.18596" y2="11.9" gradientUnits="userSpaceOnUse">
