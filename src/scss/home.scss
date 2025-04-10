@@ -1,25 +1,38 @@
 .home {
   padding-top: 106px;
-  padding-bottom: $section-paddings-mob;
-  @include background($bg-print-1x, center);
-
-  @media screen and (min-resolution: 192dpi) {
-    @include background($bg-print-2x, center);
-  }
-
-  @include media(desktop) {
-    padding-top: 289px;
-    padding-bottom: $section-paddings-des;
-  }
+  padding-bottom: 159px;
+  background-image: url(../images/home/mobile/left.png),
+    url(../images/home/mobile/right.png), url($bg-print-1x);
+  background-position: left bottom, right bottom, center center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 117px 157px, 122px 162px, cover;
 }
 
-.home-title {
+.home-title-wr {
   margin-bottom: 16px;
-  font-family: $second-f;
-  @include font($fz32, $regular, 1.16, center);
-  color: transparent;
-  background: linear-gradient(90deg, #4c1c7d 0%, #832192 50%, #4c1c7d 100%);
-  background-clip: text;
+
+  @include background(
+    '../images/home/mobile/lipstick.png',
+    top 97px right 5px,
+    auto
+  );
+
+  @media screen and (min-resolution: 192dpi) {
+    @include background(
+      '../images/home/mobile/lipstick@2x.png',
+      top 97px right 5px,
+      23%
+    );
+  }
+
+  .home-title {
+    position: relative;
+    font-family: $second-f;
+    @include font($fz32, $regular, 1.16, center);
+    color: transparent;
+    background: linear-gradient(90deg, #4c1c7d 0%, #832192 50%, #4c1c7d 100%);
+    background-clip: text;
+  }
 }
 
 .home-text {
@@ -28,13 +41,13 @@
   color: $main-color;
 }
 
-.home-btn-wrapper {
+.home-btn-wr {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: fit-content;
-  margin: 0 auto 20px;
+  margin: 0 auto;
 
   &::after {
     content: '';
