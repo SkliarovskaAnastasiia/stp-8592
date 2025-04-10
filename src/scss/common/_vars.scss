@@ -2,10 +2,12 @@
 $first-f: 'Poppins', sans-serif;
 $second-f: 'Abril Fatface', sans-serif;
 
+// Font Weights
 $regular: 400;
 $medium: 500;
 $bold: 600;
 
+// Font Sizes
 $fz12: 12px;
 $fz16: 16px;
 $fz20: 20px;
@@ -26,10 +28,24 @@ $header-burger-icon: linear-gradient(
   #bb2fd0 50%,
   #592193 100%
 );
-
+// Colors for buttons
 $btn-bg: linear-gradient(180deg, #dbb9f8 0%, #cea2f6 100%);
 $btn-bg-hover: linear-gradient(180deg, #e7c9fb 0%, #d8a9f9 100%);
 $btn-bg-active: linear-gradient(180deg, #bf94ea 0%, #ae80e5 100%);
+$google-btn-bg: linear-gradient(90deg, #4c1c7d 0%, #832192 50%, #4c1c7d 100%);
+$google-btn-bg-border: linear-gradient(to bottom, #dbb9f8 0%, #cea2f6 100%);
+$google-btn-bg-hover: linear-gradient(
+  90deg,
+  #5d2694 0%,
+  #9028a5 50%,
+  #5d2694 100%
+);
+$google-btn-bg-active: linear-gradient(
+  90deg,
+  #3a1462 0%,
+  #6b1b80 50%,
+  #3a1462 100%
+);
 
 // Paddings
 $section-paddings-mob: 24px;
