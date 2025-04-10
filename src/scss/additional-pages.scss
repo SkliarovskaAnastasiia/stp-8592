@@ -27,6 +27,25 @@
 
       @include media(desktop) {
         @include font($fz20, $regular, 1.5);
+        transition: background 0.3s ease;
+
+        .gradient-subtitle:hover,
+        .gradient-subtitle:focus {
+          background: linear-gradient(
+            90deg,
+            #6b2ca5 0%,
+            #c443e3 50%,
+            #6b2ca5 100%
+          );
+        }
+        .gradient-subtitle:active {
+          background: linear-gradient(
+            90deg,
+            #4c177a 0%,
+            #a725c2 50%,
+            #4c177a 100%
+          );
+        }
       }
     }
   }
