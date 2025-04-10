@@ -1,0 +1,70 @@
+.fashion-beauty {
+  padding-top: $section-paddings-mob;
+  padding-bottom: $section-paddings-mob;
+
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transform: rotate(180deg);
+    z-index: -1;
+
+    @include background($bg-gradient-1x, center);
+
+    @media screen and (min-resolution: 192dpi) {
+      @include background($bg-gradient-2x, center);
+    }
+  }
+
+  &-title {
+    margin-bottom: 20px;
+    font-family: $second-f;
+    @include font($fz24, $regular, 1.2, center);
+    @include gradient-text($g-title);
+  }
+
+  &-subtitle-wr {
+    margin-bottom: 12px;
+    background-image: url(../images/fashion-and-beauty/mobile/left.png),
+      url(../images/fashion-and-beauty/mobile/right.png);
+    background-position: left center, right center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 35px 45px, 35px 45px;
+  }
+
+  &-subtitle {
+    font-family: $second-f;
+    @include font($fz20, $regular, 1.5, center);
+    @include gradient-text($g-subtitle);
+  }
+
+  &-intro {
+    margin-bottom: 8px;
+    font-family: $first-f;
+    @include font($fz16, $regular, 1.38, center);
+  }
+
+  &-description {
+    margin-bottom: 20px;
+    font-family: $first-f;
+    @include font($fz12, $regular, 1.2, center);
+  }
+
+  &-video {
+    border-radius: 6px;
+    aspect-ratio: 16 / 9;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border-radius: 6px;
+    }
+  }
+}
