@@ -22,15 +22,15 @@
       href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/stp-8592/assets/main-9d5ef083.js"></script>
-    <link rel="stylesheet" href="/stp-8592/assets/main-bf4e698b.css">
+    <script type="module" crossorigin src="/stp-8592/assets/main-7711049a.js"></script>
+    <link rel="stylesheet" href="/stp-8592/assets/main-470b5336.css">
   </head>
   <body>
     <header class="header">
-  <div class="header-container">
-    <div class="header-wrapper">
-      <div class="header-content">
-        <a href="/" class="header-logo" aria-label="Home">
+  <div class="header__container">
+    <div class="header__wrapper">
+      <div class="header__content">
+        <a href="/" class="header__logo" aria-label="Home">
           <picture>
             <source
               srcset="
@@ -51,32 +51,38 @@
         </a>
 
         <!-- Center: Navigation links -->
-        <nav class="header-nav">
-          <ul class="nav-list">
-            <li class="nav-item">
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
               <a href="#how-it-started">How It All Started</a>
             </li>
-            <li class="nav-item"><a href="#features">Features</a></li>
-            <li class="nav-item">
+            <li class="header__nav-item">
+              <a href="#features">Features</a>
+            </li>
+            <li class="header__nav-item">
               <a href="#fashion-and-beauty">Fashion &amp; Beauty</a>
             </li>
-            <li class="nav-item"><a href="#gallery">Gallery</a></li>
-            <li class="nav-item"><a href="#reviews">Reviews</a></li>
+            <li class="header__nav-item">
+              <a href="#gallery">Gallery</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#reviews">Reviews</a>
+            </li>
           </ul>
         </nav>
 
         <!-- Right: Download button -->
         <a
           href="https://play.google.com/store/apps/details?id=makeover.project.makeup.salon.match.three.tile.puzzle&hl=en&gl=us"
-          class="header-btn-download"
+          class="header__btn-download"
           noopener
           noreferrer
           >Download</a
         >
 
         <!-- Burger mobile menu -->
-        <button class="header-mobile-menu" aria-label="Toggle mobile menu">
-          <svg class="header-icon" aria-hidden="true">
+        <button class="header__mobile-menu" aria-label="Toggle mobile menu">
+          <svg class="header__mobile-menu-icon" aria-hidden="true">
             <use href="../images/sprite.svg#icon-burger"></use>
           </svg>
         </button>
@@ -116,69 +122,36 @@
 
 
     <section id="home" class="home container">
-  <div class="home-title-wrapper">
-    <h1 class="home-title">
+  <div class="home__title-wrapper">
+    <h1 class="home__title">
       Makeover Magic – Where Every Puzzle Unlocks a Stunning Transformation!
     </h1>
   </div>
 
-  <p class="home-text">
+  <p class="home__text">
     Match tiles, unlock beauty tools, and create jaw-dropping makeovers!
   </p>
 
-  <div class="home-btn-wrapper">
+  <div class="home__btn-wrapper">
     <a
       href="https://play.google.com/store/apps/details?id=makeover.project.makeup.salon.match.three.tile.puzzle&hl=en&gl=us"
-      class="home-btn-download"
+      class="home__btn-download"
       rel="noopener noreferrer"
     >
-      <svg class="home-btn-download-icon">
+      <svg class="home__btn-download-icon">
         <use href="../images/sprite.svg#icon-play"></use>
       </svg>
-      <div class="home-btn-download-text-wrapper">
-        <svg class="home-btn-download-label">
+      <div class="home__btn-download-text-wrapper">
+        <svg class="home__btn-download-label">
           <use href="../images/sprite.svg#google-label"></use>
         </svg>
-        <svg class="home-btn-download-brand">
+        <svg class="home__btn-download-brand">
           <use href="../images/sprite.svg#google-brand"></use>
         </svg>
       </div>
     </a>
   </div>
 </section>
-
-<!-- Old Code -->
-<!-- <section id="home" class="home container">
-  <div class="home-title-wr">
-    <h1 class="home-title">
-      Makeover Magic – Where Every Puzzle Unlocks a Stunning Transformation!
-    </h1>
-  </div>
-
-  <p class="home-text">
-    Match tiles, unlock beauty tools, and create jaw-dropping makeovers!
-  </p>
-
-  <div class="home-btn-wr">
-    <a
-      href="https://play.google.com/store/apps/details?id=makeover.project.makeup.salon.match.three.tile.puzzle&hl=en&gl=us"
-      class="home-btn-download"
-      rel="noopener noreferrer"
-    >
-      <svg class="home-btn-download-icon">
-        <use href="../images/sprite.svg#icon-play"></use>
-      </svg>
-      <div class="home-btn-download-text-wr">
-        <svg class="google-label">
-          <use href="../images/sprite.svg#google-label"></use>
-        </svg>
-        <svg class="google-brand">
-          <use href="../images/sprite.svg#google-brand"></use>
-        </svg>
-      </div>
-    </a>
-  </div>
-</section> -->
 
     <section id="how-it-all-started" class="container how-it-all-started">
   <h2 class="how-it-all-started-title gradient-title">How It All Started</h2>
@@ -227,17 +200,17 @@
 </section>
 
     <section id="fashion-and-beauty" class="fashion-beauty container">
-  <h4 class="fashion-beauty-title">Fashion &amp; Beauty</h4>
-  <div class="fashion-beauty-subtitle-wr">
-    <p class="fashion-beauty-subtitle">From Ordinary to Extraordinary!</p>
+  <h4 class="fashion-beauty__title">Fashion &amp; Beauty</h4>
+  <div class="fashion-beauty__subtitle-wrapper">
+    <p class="fashion-beauty__subtitle">From Ordinary to Extraordinary!</p>
   </div>
   <!-- Introductory Text -->
-  <p class="fashion-beauty-intro">
+  <p class="fashion-beauty__intro">
     Your styling choices bring these characters to life!
   </p>
 
   <!-- Main Description -->
-  <p class="fashion-beauty-description">
+  <p class="fashion-beauty__description">
     Match tiles, collect beauty tools, and give each character a full makeover.
     From makeup to hairstyles and outfits, every detail matters. Whether it’s a
     wedding glow-up or a red carpet look, you hold the power to create
@@ -245,10 +218,10 @@
   </p>
 
   <!-- Video Embed -->
-  <div class="fashion-beauty-video">
+  <div class="fashion-beauty__video">
     <iframe
-      class="fashion-beauty-video-iframe"
-      src="https://www.youtube.com/embed/FLmCGn7LrSs?controls=0&modestbranding=1&rel=0"
+      class="fashion-beauty__video-iframe"
+      src="https://www.youtube.com/embed/FLmCGn7LrSs?controls=0&amp;modestbranding=1&amp;rel=0"
       loading="lazy"
       title="Makeover Magic"
       frameborder="0"
