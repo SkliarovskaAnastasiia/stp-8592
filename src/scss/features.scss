@@ -1,0 +1,91 @@
+.features {
+  padding-top: $section-paddings-mob;
+  padding-bottom: $section-paddings-mob;
+  @include background($bg-print-1x, center);
+  @media screen and (min-resolution: 192pdi) {
+    @include background($bg-print-2x, center);
+  }
+
+  @include media(desktop) {
+    padding-top: $section-paddings-des;
+    padding-bottom: $section-paddings-des;
+  }
+
+  .gradient-title {
+    @include font($fz24);
+    margin-bottom: $mg20;
+
+    @include media(desktop) {
+      @include font(36px);
+      margin-bottom: 56px;
+    }
+  }
+
+  .features-border {
+    max-width: 280px;
+    margin: 0 auto;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: -0.8px;
+      right: -0.8px;
+      bottom: -0.8px;
+      border-radius: 5px;
+      background-image: $header-burger-icon;
+    }
+
+    @include media(desktop) {
+      max-width: 896px;
+
+      &::after {
+        border-radius: 20px;
+      }
+    }
+
+    .features-text-block {
+      padding: 20px 24px;
+      margin: 0 auto;
+      border-radius: 5px;
+      //     border: 1px solid $violet;
+
+      position: relative;
+      z-index: 1;
+
+      @include background($bg-wavy-1x, center, 170%);
+      @media screen and (min-resolution: 192dpi) {
+        @include background($bg-wavy-2x, center, 170%);
+      }
+
+      @include media(desktop) {
+        padding: 40px 136px;
+        border-radius: 20px;
+
+        @include background($bg-wavy-1x, bottom 82% right 65%, 101%);
+        @media screen and (min-resolution: 192dpi) {
+          @include background($bg-wavy-2x, top right);
+        }
+      }
+
+      .gradient-subtitle {
+        @include font($fz20, $regular, 1.2);
+        margin-bottom: $mg12;
+
+        @include media(desktop) {
+          @include font($fz32);
+          margin-bottom: $mg24;
+        }
+      }
+
+      .features-text {
+        @include font($fz16, $regular, 1.38);
+
+        @include media(desktop) {
+          @include font($fz24);
+        }
+      }
+    }
+  }
+}
