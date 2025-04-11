@@ -1,3 +1,98 @@
-<section id="gallery">
-  <div class="container"></div>
+<section class="gallery" id="gallery">
+  <div class="container">
+    <h2 class="gradient-title">Gallery</h2>
+    <div class="gallery-text-block">
+      <h3 class="gradient-subtitle">Picture-Perfect Transformations!</h3>
+      <p class="gallery-text">
+        Glamorous, trendy, and beautifully designed—just like your makeovers!
+      </p>
+    </div>
+  </div>
+
+  <div class="gallery-swiper-container">
+    <div class="gallery-swiper swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <picture>
+            <source
+              srcset="
+                /images/gallery/desktop/01.jpg    1x,
+                /images/gallery/desktop/01@2x.jpg 2x
+              "
+              media="(min-width: 1200px)"
+            />
+            <source
+              srcset="
+                /images/gallery/mobile/01.jpg    1x,
+                /images/gallery/mobile/01@2x.jpg 2x
+              "
+              media="(min-width: 320px)"
+            />
+            <img
+              src="/images/gallery/mobile/01.jpg"
+              alt="gallery-item"
+              class="gallery-img"
+            />
+          </picture>
+        </div>
+        <div class="swiper-slide">
+          <picture>
+            <source
+              srcset="
+                /images/gallery/desktop/02.jpg    1x,
+                /images/gallery/desktop/02@2x.jpg 2x
+              "
+              media="(min-width: 1200px)"
+            />
+            <source
+              srcset="
+                /images/gallery/mobile/02.jpg    1x,
+                /images/gallery/mobile/02@2x.jpg 2x
+              "
+              media="(min-width: 320px)"
+            />
+            <img
+              src="/images/gallery/mobile/02.jpg"
+              alt="gallery-item"
+              class="gallery-img"
+            />
+          </picture>
+        </div>
+        <div class="swiper-slide gallery-swiper-slide">
+          <picture>
+            <source
+              srcset="
+                /images/gallery/desktop/03.jpg    1x,
+                /images/gallery/desktop/03@2x.jpg 2x
+              "
+              media="(min-width: 1200px)"
+            />
+            <source
+              srcset="
+                /images/gallery/mobile/03.jpg    1x,
+                /images/gallery/mobile/03@2x.jpg 2x
+              "
+              media="(min-width: 320px)"
+            />
+            <img
+              src="/images/gallery/mobile/03.jpg"
+              alt="gallery-item"
+              class="gallery-img"
+            />
+          </picture>
+        </div>
+      </div>
+
+      <button type="button" class="swiper-btn-prev btn-prev">
+        <svg width="36" height="36">
+          <use href="/images/sprite.svg#icon-angle-left-b"></use>
+        </svg>
+      </button>
+      <button type="button" class="swiper-btn-next btn-next">
+        <svg width="36" height="36">
+          <use href="/images/sprite.svg#icon-angle-left-b"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
 </section>
