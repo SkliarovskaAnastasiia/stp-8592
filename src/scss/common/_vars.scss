@@ -28,6 +28,11 @@ $header-burger-icon: linear-gradient(
   #bb2fd0 50%,
   #592193 100%
 );
+
+// Colors for gradient text
+$g-title: linear-gradient(90deg, #4c1c7d 0%, #832192 50%, #4c1c7d 100%);
+$g-subtitle: linear-gradient(90deg, #592193 0%, #bb2fd0 50%, #592193 100%);
+
 // Colors for buttons
 $btn-bg: linear-gradient(180deg, #dbb9f8 0%, #cea2f6 100%);
 $btn-bg-hover: linear-gradient(180deg, #e7c9fb 0%, #d8a9f9 100%);

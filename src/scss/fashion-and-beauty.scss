@@ -1,0 +1,172 @@
+.fashion-beauty {
+  padding-top: $section-paddings-mob;
+  padding-bottom: $section-paddings-mob;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transform: rotate(180deg);
+    z-index: -1;
+    @include background($bg-gradient-1x, center);
+
+    @media screen and (min-resolution: 192dpi) {
+      @include background($bg-gradient-2x, center);
+    }
+  }
+
+  @include media(desktop) {
+    padding-top: $section-paddings-des;
+    padding-bottom: $section-paddings-des;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-family: $second-f;
+    @include font($fz24, $regular, 1.2, center);
+    @include gradient-text($g-title);
+
+    @include media(desktop) {
+      @include font(36px, $regular, 1.2, center);
+      margin-bottom: 56px;
+    }
+  }
+
+  &__subtitle-wrapper {
+    margin-bottom: 12px;
+    background-image: url(../images/fashion-and-beauty/mobile/left.png),
+      url(../images/fashion-and-beauty/mobile/right.png);
+    background-position: 0px 2px, 240px 1px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 35px 45px, 35px 45px;
+
+    @media screen and (min-resolution: 192dpi) {
+      background-image: url(../images/fashion-and-beauty/mobile/left@2x.png),
+        url(../images/fashion-and-beauty/mobile/right@2x.png);
+      background-position: 0px 2px, 240px 1px;
+      background-repeat: no-repeat, no-repeat;
+      background-size: 35px 45px, 35px 45px;
+    }
+
+    @include media(desktop) {
+      margin-bottom: 24px;
+      background-image: url(../images/fashion-and-beauty/desktop/left.png),
+        url(../images/fashion-and-beauty/desktop/right.png);
+      background-position: 60px 0px, 890px 0px;
+      background-repeat: no-repeat, no-repeat;
+      background-size: 132px 170px, 130px 167px;
+
+      @media screen and (min-resolution: 192dpi) {
+        background-image: url(../images/fashion-and-beauty/desktop/left@2x.png),
+          url(../images/fashion-and-beauty/desktop/right@2x.png);
+        background-position: 60px 0px, 890px 0px;
+        background-repeat: no-repeat, no-repeat;
+        background-size: 132px 170px, 130px 167px;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-family: $second-f;
+    @include font($fz20, $regular, 1.5, center);
+    @include gradient-text($g-subtitle);
+
+    @include media(desktop) {
+      margin-bottom: 24px;
+      @include font($fz32, $regular, 1.2);
+    }
+  }
+
+  &__intro {
+    margin-bottom: 8px;
+    font-family: $first-f;
+    @include font($fz16, $regular, 1.38, center);
+
+    @include media(desktop) {
+      margin-bottom: 16px;
+      @include font($fz24, $regular, 1.2);
+    }
+  }
+
+  &__description {
+    margin-bottom: 20px;
+    font-family: $first-f;
+    @include font($fz12, $regular, 1.2, center);
+
+    @include media(desktop) {
+      margin: 0 auto;
+      width: 625px;
+      @include font($fz16, $regular, 1.2);
+    }
+  }
+
+  &__video {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    aspect-ratio: 337/155;
+
+    @include media(desktop) {
+      border-radius: 20px;
+      aspect-ratio: 543/250;
+    }
+
+    &-iframe {
+      display: none;
+      width: 100%;
+      height: 100%;
+      border-radius: 6px;
+    }
+
+    &-thumb {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 6px;
+
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &-play {
+      position: absolute;
+      padding: 0;
+      width: 50px;
+      height: 50px;
+      border: none;
+      background: transparent;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      cursor: pointer;
+
+      @include media(desktop) {
+        width: 90px;
+        height: 90px;
+      }
+
+      &:hover .fashion-beauty__video-play-icon,
+      &:focus .fashion-beauty__video-play-icon,
+      &:active .fashion-beauty__video-play-icon {
+        transform: scale(1.2);
+      }
+
+      &-icon {
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+  }
+}

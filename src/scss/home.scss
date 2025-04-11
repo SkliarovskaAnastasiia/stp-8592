@@ -1,93 +1,189 @@
 .home {
   padding-top: 106px;
-  padding-bottom: $section-paddings-mob;
-  @include background($bg-print-1x, center);
+  padding-bottom: 159px;
+  background-image: url(../images/home/mobile/left.png),
+    url(../images/home/mobile/right.png), url($bg-print-1x);
+  background-position: left bottom, right bottom, center center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 117px 157px, 122px 162px, cover;
 
   @media screen and (min-resolution: 192dpi) {
-    @include background($bg-print-2x, center);
+    background-image: url(../images/home/mobile/left@2x.png),
+      url(../images/home/mobile/right@2x.png), url($bg-print-2x);
+    background-position: left bottom, right bottom, center center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 117px 157px, 122px 162px, cover;
   }
 
   @include media(desktop) {
-    padding-top: 289px;
-    padding-bottom: $section-paddings-des;
-  }
-}
+    padding-top: 300px;
+    padding-bottom: 124px;
+    background-image: url(../images/home/desktop/left.png),
+      url(../images/home/desktop/right.png), url($bg-print-1x);
+    background-position: left bottom, right bottom, center center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 263px 350px, 273px 365px, cover;
 
-.home-title {
-  margin-bottom: 16px;
-  font-family: $second-f;
-  @include font($fz32, $regular, 1.16, center);
-  color: transparent;
-  background: linear-gradient(90deg, #4c1c7d 0%, #832192 50%, #4c1c7d 100%);
-  background-clip: text;
-}
-
-.home-text {
-  margin-bottom: 16px;
-  @include font($fz16, $regular, 1.2, center);
-  color: $main-color;
-}
-
-.home-btn-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  margin: 0 auto 20px;
-
-  &::after {
-    content: '';
-    position: absolute;
-    width: 101.5%;
-    height: 104%;
-    border-radius: 4px;
-    background-image: $google-btn-bg-border;
-  }
-}
-
-.home-btn-download {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 11px;
-  border-radius: 4px;
-  width: fit-content;
-  background-image: $google-btn-bg;
-  cursor: pointer;
-  z-index: 1;
-  transition: background 0.3s ease;
-
-  &:hover {
-    background-image: $google-btn-bg-hover;
+    @media screen and (min-resolution: 192dpi) {
+      background-image: url(../images/home/desktop/left@2x.png),
+        url(../images/home/desktop/right@2x.png), url($bg-print-2x);
+      background-position: left bottom, right bottom, center center;
+      background-repeat: no-repeat, no-repeat, no-repeat;
+      background-size: 263px 350px, 273px 365px, cover;
+    }
   }
 
-  &:active {
-    background-image: $google-btn-bg-active;
+  // Title Wrapper
+  &__title-wrapper {
+    margin-bottom: 16px;
+    @include background(
+      '../images/home/mobile/lipstick.png',
+      top 97px right 5px,
+      27%
+    );
+    @media screen and (min-resolution: 192dpi) {
+      @include background(
+        '../images/home/mobile/lipstick@2x.png',
+        top 97px right 5px,
+        27%
+      );
+    }
+    @include media(desktop) {
+      margin-bottom: 40px;
+      @include background(
+        '../images/home/desktop/lipstick.png',
+        top 13px right 135px,
+        16%
+      );
+      @media screen and (min-resolution: 192dpi) {
+        @include background(
+          '../images/home/desktop/lipstick@2x.png',
+          top 13px right 135px,
+          16%
+        );
+      }
+    }
   }
 
-  &-icon {
-    width: 25px;
-    height: 29px;
-    margin-bottom: 2px;
-    margin-right: 9px;
+  // Title
+  &__title {
+    position: relative;
+    font-family: $second-f;
+    @include font($fz32, $regular, 1.16, center);
+    @include gradient-text($g-title);
+
+    @include media(desktop) {
+      margin: 0 auto;
+      font-size: 48px;
+      line-height: 1.25;
+      width: 623px;
+    }
   }
 
-  &-text {
+  // Text Content
+  &__text {
+    margin-bottom: 16px;
+    @include font($fz16, $regular, 1.2, center);
+    color: $main-color;
+    @include media(desktop) {
+      margin: 36px auto;
+      width: 718px;
+      font-size: 24px;
+      line-height: 1.2;
+    }
+  }
+
+  // Button Wrapper
+  &__btn-wrapper {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    align-self: start;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 101.5%;
+      height: 104%;
+      border-radius: 4px;
+      background-image: $google-btn-bg-border;
+      @include media(desktop) {
+        width: 102.2%;
+        height: 106.5%;
+        border-radius: 9px;
+      }
+    }
   }
 
-  .google-label {
-    width: 43px;
-    height: 7px;
-    margin-bottom: 4.5px;
-  }
+  // Download Button
+  &__btn-download {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 11px;
+    border-radius: 4px;
+    width: fit-content;
+    background-image: $google-btn-bg;
+    cursor: pointer;
+    z-index: 1;
+    transition: background 0.3s ease;
 
-  .google-brand {
-    width: 94px;
-    height: 19px;
+    @include media(desktop) {
+      padding: 11px 15px;
+      border-radius: 9px;
+    }
+
+    &:hover {
+      background-image: $google-btn-bg-hover;
+    }
+
+    &:active {
+      background-image: $google-btn-bg-active;
+    }
+
+    // Button Icon
+    &-icon {
+      width: 25px;
+      height: 29px;
+      margin-bottom: 2px;
+      margin-right: 9px;
+      @include media(desktop) {
+        width: 34.148px;
+        height: 38.612px;
+        margin-right: 12px;
+      }
+    }
+
+    // Button Text Wrapper
+    &-text-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-self: start;
+    }
+
+    // Button Label
+    &-label {
+      width: 43px;
+      height: 7px;
+      margin-bottom: 4.5px;
+      @include media(desktop) {
+        width: 57.5px;
+        height: 9.3px;
+        margin-bottom: 6px;
+      }
+    }
+
+    // Button Brand
+    &-brand {
+      width: 94px;
+      height: 19px;
+      @include media(desktop) {
+        width: 125.333px;
+        height: 25.35px;
+      }
+    }
   }
 }

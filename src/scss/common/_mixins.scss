@@ -26,3 +26,27 @@
   background-size: $size;
   background-repeat: no-repeat;
 }
+
+@mixin gradient-text($gradient) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+@mixin lhcalc($font-size, $line-height) {
+  font-size: $font-size;
+
+  @if $line-height == normal or $line-height == 'normal' {
+    line-height: 1.2;
+  } @else if (type-of($line-height) == 'number') {
+    @if (unit($line-height) == 'px') {
+      line-height: round(($line-height / $font-size) * 100) / 100;
+    } @else {
+      line-height: round($line-height * 100) / 100;
+    }
+  } @else {
+    line-height: $line-height;
+  }
+}

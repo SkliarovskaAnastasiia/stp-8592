@@ -25,14 +25,14 @@ body {
 .gradient-title {
   font-family: $second-f;
   color: transparent;
-  background: linear-gradient(90deg, #4c1c7d 0%, #832192 50%, #4c1c7d 100%);
+  background: $google-btn-bg;
   background-clip: text;
 }
 
 .gradient-subtitle {
   font-family: $second-f;
   color: transparent;
-  background: linear-gradient(90deg, #592193 0%, #bb2fd0 50%, #592193 100%);
+  background: $header-burger-icon;
   background-clip: text;
 }
 
