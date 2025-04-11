@@ -35,6 +35,14 @@
     background-position: left center, right center;
     background-repeat: no-repeat, no-repeat;
     background-size: 35px 45px, 35px 45px;
+
+    @media screen and (min-resolution: 192dpi) {
+      background-image: url(../images/fashion-and-beauty/mobile/left@2x.png),
+        url(../images/fashion-and-beauty/mobile/right@2x.png);
+      background-position: left center, right center;
+      background-repeat: no-repeat, no-repeat;
+      background-size: 35px 45px, 35px 45px;
+    }
   }
 
   &__subtitle {
@@ -56,13 +64,56 @@
   }
 
   &__video {
+    position: relative;
     border-radius: 6px;
+    overflow: hidden;
     aspect-ratio: 16 / 9;
 
     &-iframe {
+      display: none;
       width: 100%;
       height: 100%;
       border-radius: 6px;
+    }
+
+    &-thumb {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 6px;
+
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &-play {
+      position: absolute;
+      padding: 0;
+      width: 50px;
+      height: 50px;
+      border: none;
+      background: transparent;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      cursor: pointer;
+
+      &:hover .fashion-beauty__video-play-icon,
+      &:focus .fashion-beauty__video-play-icon,
+      &:active .fashion-beauty__video-play-icon {
+        transform: scale(1.2);
+      }
+
+      &-icon {
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transition: transform 0.3s ease-in-out;
+      }
     }
   }
 }
