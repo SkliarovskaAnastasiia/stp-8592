@@ -109,6 +109,7 @@
       height: 104%;
       border-radius: 4px;
       background-image: $google-btn-bg-border;
+
       @include media(desktop) {
         width: 102.2%;
         height: 106.5%;

@@ -1,0 +1,87 @@
+.mobile-menu__backdrop {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  pointer-events: none;
+
+  &--open {
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  padding-top: 72px;
+  padding-left: 43px;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+
+  .mobile-menu__backdrop--open & {
+    transform: translateX(0);
+  }
+
+  &--close {
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 129px;
+  }
+
+  &__close {
+    position: relative;
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      color: red;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1002;
+    }
+
+    &-icon {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__list {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: end;
+    color: $main-color;
+    @include font(14px, $regular, 1.2);
+  }
+
+  &__download-btn {
+    margin-top: auto;
+  }
+}
