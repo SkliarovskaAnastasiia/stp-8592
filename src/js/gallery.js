@@ -1,23 +1,18 @@
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
 
 const swiper = new Swiper('.gallery-swiper', {
   centeredSlides: true,
   speed: 600,
   breakpoints: {
     320: {
-      slidesOffsetBefore: 70,
-      spaceBetween: 12,
       slidesPerView: 'auto',
     },
     1200: {
-      slidesOffsetBefore: 24,
-      spaceBetween: 24,
       slidesPerView: 3,
     },
   },
   initialSlide: 1,
-  touchEventsTarget: 'swiper-wrapper',
+
   keyboard: {
     enabled: false,
     onlyInViewport: false,
@@ -25,13 +20,19 @@ const swiper = new Swiper('.gallery-swiper', {
   mousewheel: {
     invert: false,
   },
+
+  navigation: {
+    nextEl: '.swiper-btn-next',
+    prevEl: '.swiper-btn-prev',
+  },
   on: {
     slideChange() {
       updateActiveSlide(this);
+      HandleBtnClick(this, false);
     },
     init() {
       updateActiveSlide(this);
-      updateteButtons(this);
+      HandleBtnClick(this, true);
     },
   },
 });
@@ -42,16 +43,19 @@ function updateActiveSlide(swiper) {
   });
 }
 
-function updateteButtons(swiper) {
+function HandleBtnClick(swiper, isInit) {
   const btnNext = document.querySelector('.swiper-btn-next');
   const btnPrev = document.querySelector('.swiper-btn-prev');
 
-  btnNext.addEventListener('click', () => {
-    console.log('next');
-    swiper.slideNext();
-  });
-  btnPrev.addEventListener('click', () => {
-    console.log('prev');
-    swiper.slidePrev();
-  });
+  if (isInit) {
+    btnNext.addEventListener('click', () => {
+      swiper.slideNext();
+    });
+    btnPrev.addEventListener('click', () => {
+      swiper.slidePrev();
+    });
+  }
+
+  btnPrev.disabled = swiper.isBeginning;
+  btnNext.disabled = swiper.isEnd;
 }
