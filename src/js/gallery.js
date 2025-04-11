@@ -17,7 +17,7 @@ const swiper = new Swiper('.swiper', {
     modifier: 4,
     slideShadows: true,
   },
-  loop: true,
+
   navigation: {
     nextEl: '.gallery-btn-next',
     prevEl: '.gallery-btn-prev',

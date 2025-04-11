@@ -54,18 +54,18 @@
   .gallery-swiper-container {
     max-width: 320px;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     .gallery-swiper {
       width: 100%;
 
       .gallery-swiper-wr {
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       .swiper-slide {
-        position: relative;
+        //    position: relative;
         width: 135px !important;
 
         .gallery-img {
