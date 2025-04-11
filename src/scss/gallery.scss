@@ -53,24 +53,90 @@
 
   .gallery-swiper-container {
     max-width: 320px;
+    margin: 0 auto;
     overflow: hidden;
 
-    .gallery-swiper {
-      width: 100%;
+    @include media(desktop) {
+      max-width: 1200px;
+      padding: 0 56px;
+    }
 
-      .gallery-swiper-wr {
+    .gallery-swiper {
+      position: relative;
+      @include media(desktop) {
         display: flex;
         justify-content: center;
         align-items: center;
       }
 
-      .swiper-slide {
-        //    position: relative;
-        width: 135px !important;
+      .swiper-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        .gallery-img {
-          object-fit: cover;
+        @include media(desktop) {
+          // width: 1088px !important;
+          // justify-content: start;
+          // column-gap: 24px;
+        }
+
+        .swiper-slide {
+          width: 135px !important;
           border-radius: 13px;
+          filter: blur(1px);
+          // transition: width 0.3s linear;
+
+          @include media(desktop) {
+            width: 254px !important;
+            height: 280px !important;
+            border-radius: 16px;
+          }
+
+          &.active {
+            filter: none;
+            width: 183px !important;
+            height: 236px !important;
+
+            @include media(desktop) {
+              width: 346px !important;
+              height: 445px !important;
+            }
+          }
+
+          .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            border-radius: 13px;
+            @include media(desktop) {
+              border-radius: 16px;
+            }
+          }
+        }
+      }
+
+      .btn-prev,
+      .btn-next {
+        display: none;
+
+        @include media(desktop) {
+          display: block;
+          border: none;
+          background-color: transparent;
+          line-height: 0;
+          padding: 0;
+          position: absolute;
+          z-index: 1;
+        }
+      }
+      @include media(desktop) {
+        .btn-prev {
+          left: 0;
+        }
+        .btn-next {
+          right: 0;
+          transform: rotate(180deg);
         }
       }
     }
