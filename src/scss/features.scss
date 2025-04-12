@@ -91,9 +91,26 @@
   }
 
   .features-list {
+    width: 305px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    align-items: center;
+    column-gap: 8px;
+    row-gap: 20px;
+
+    @include media(desktop) {
+      width: 950px;
+      margin: 0 auto;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 0.5fr);
+      gap: 0;
+    }
+
     .feature-item {
       max-width: 132px;
       padding-top: 20px;
+      margin: 0 auto;
 
       @include media(desktop) {
         max-width: 270px;
@@ -107,168 +124,63 @@
       }
     }
 
-    .f-yellow {
-      @include background(
-        '../images/features/mobile/crystal-01.png',
-        top center,
-        20px 16px
-      );
-
-      @media screen and (min-resolution: 192dpi) {
-        @include background(
-          '../images/features/mobile/crystal-01@2x.png',
-          top center,
-          20px 16px
-        );
-      }
-
+    .feature-item-img {
+      grid-area: 3/2/7/3;
       @include media(desktop) {
-        max-width: 250px;
+        grid-area: 1/2/4/3;
+      }
+      .feature-img {
+        width: 165px;
+        height: 291px;
 
-        @include background(
-          '../images/features/desktop/crystal-01.png',
-          top center,
-          40px 35px
-        );
-
-        @media screen and (min-resolution: 192dpi) {
-          @include background(
-            '../images/features/desktop/crystal-01@2x.png',
-            top center,
-            40px 35px
-          );
+        @include media(desktop) {
+          width: 305px;
+          height: 535px;
+          margin: 0 auto;
         }
+      }
+    }
+
+    .f-yellow {
+      grid-area: 2/1/4/2;
+      @include media(desktop) {
+        grid-area: 1/1/2/2;
+        max-width: 250px;
       }
     }
 
     .f-green {
-      @include background(
-        '../images/features/mobile/crystal-03.png',
-        top center,
-        20px 16px
-      );
-
-      @media screen and (min-resolution: 192dpi) {
-        @include background(
-          '../images/features/mobile/crystal-03@2x.png',
-          top center,
-          20px 16px
-        );
-      }
-
+      grid-area: 1/2/3/3;
       @include media(desktop) {
-        @include background(
-          '../images/features/desktop/crystal-03.png',
-          top center,
-          40px 35px
-        );
-
-        @media screen and (min-resolution: 192dpi) {
-          @include background(
-            '../images/features/desktop/crystal-03@2x.png',
-            top center,
-            40px 35px
-          );
-        }
+        grid-area: 1/3/2/4;
+        grid-column: 3;
       }
     }
 
     .f-purple {
-      @include background(
-        '../images/features/mobile/crystal-02.png',
-        top center,
-        20px 16px
-      );
-
-      @media screen and (min-resolution: 192dpi) {
-        @include background(
-          '../images/features/mobile/crystal-02@2x.png',
-          top center,
-          20px 16px
-        );
-      }
-
+      grid-area: 4/1/6/2;
       @include media(desktop) {
-        @include background(
-          '../images/features/desktop/crystal-02.png',
-          top center,
-          40px 35px
-        );
-
-        @media screen and (min-resolution: 192dpi) {
-          @include background(
-            '../images/features/desktop/crystal-02@2x.png',
-            top center,
-            40px 35px
-          );
-        }
+        grid-area: 2/1/3/2;
       }
     }
 
     .f-pink {
-      @include background(
-        '../images/features/mobile/crystal-05.png',
-        top center,
-        20px 16px
-      );
-
-      @media screen and (min-resolution: 192dpi) {
-        @include background(
-          '../images/features/mobile/crystal-05@2x.png',
-          top center,
-          20px 16px
-        );
-      }
-
+      grid-area: 6/1/8/2;
       @include media(desktop) {
         max-width: 330px;
-
-        @include background(
-          '../images/features/desktop/crystal-05.png',
-          top center,
-          40px 35px
-        );
-
-        @media screen and (min-resolution: 192dpi) {
-          @include background(
-            '../images/features/desktop/crystal-05@2x.png',
-            top center,
-            40px 35px
-          );
-        }
+        grid-area: 4/2/5/3;
       }
     }
 
     .f-blue {
-      @include background(
-        '../images/features/mobile/crystal-04.png',
-        top center,
-        20px 16px
-      );
-
-      @media screen and (min-resolution: 192dpi) {
-        @include background(
-          '../images/features/mobile/crystal-04@2x.png',
-          top center,
-          20px 16px
-        );
-      }
-
+      grid-area: 7/2/9/3;
       @include media(desktop) {
-        @include background(
-          '../images/features/desktop/crystal-04.png',
-          top center,
-          40px 35px
-        );
-
-        @media screen and (min-resolution: 192dpi) {
-          @include background(
-            '../images/features/desktop/crystal-04@2x.png',
-            top center,
-            40px 35px
-          );
-        }
+        grid-area: 2/3/3/4;
       }
     }
   }
+}
+
+@each $class, $file in $features {
+  @include feature-icon($class, $file);
 }

@@ -75,3 +75,13 @@ $bg-wavy-1x: '../images/backgrounds/desktop/03.jpg';
 $bg-wavy-2x: '../images/backgrounds/desktop/03@2x.jpg';
 
 $page-bg: linear-gradient(90deg, #ebd8ff 0%, #fef9ff 50%, #ebd8ff 100%);
+
+//Features map
+@use 'sass:map';
+$features: (
+  f-yellow: crystal-01,
+  f-green: crystal-03,
+  f-purple: crystal-02,
+  f-pink: crystal-05,
+  f-blue: crystal-04,
+);
