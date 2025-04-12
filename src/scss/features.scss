@@ -100,8 +100,6 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(8, 1fr);
     align-items: center;
-    // column-gap: 8px;
-    row-gap: 20px;
 
     @include media(desktop) {
       width: 950px;
@@ -114,7 +112,7 @@
     .feature-item {
       max-width: 132px;
       padding-top: 20px;
-      // margin: 0 auto;
+      margin: 0 auto;
 
       @include media(desktop) {
         max-width: 270px;
@@ -130,16 +128,20 @@
 
     .feature-item-img {
       grid-area: 3/2/7/3;
+      width: 165px;
+      height: 252px;
+      margin: 25px 0;
+
       @include media(desktop) {
+        width: 305px;
+        height: 462px;
         grid-area: 1/2/4/3;
       }
-      .feature-img {
-        width: 165px;
-        height: 291px;
 
+      .feature-img {
+        height: 100%;
+        object-fit: cover;
         @include media(desktop) {
-          width: 305px;
-          height: 535px;
           margin: 0 auto;
         }
       }
