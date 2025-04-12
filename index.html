@@ -23,8 +23,8 @@
       rel="stylesheet"
     />
     <script type="module" crossorigin src="/stp-8592/assets/vendor-1404f96d.js"></script>
-    <script type="module" crossorigin src="/stp-8592/assets/main-4af023dd.js"></script>
-    <link rel="stylesheet" href="/stp-8592/assets/main-2b806aa4.css">
+    <script type="module" crossorigin src="/stp-8592/assets/main-42a40b5a.js"></script>
+    <link rel="stylesheet" href="/stp-8592/assets/main-6344b84d.css">
   </head>
   <body>
     <header class="header">
@@ -82,11 +82,10 @@
         >
 
         <!-- Burger mobile menu -->
-        <button class="header__mobile-menu" aria-label="Toggle mobile menu">
-          <svg class="header__mobile-menu-icon" aria-hidden="true">
-            <use href="/stp-8592/assets/sprite-d2ccddfb.svg#icon-burger"></use>
-          </svg>
-        </button>
+        <button
+          class="header__mobile-menu"
+          aria-label="Toggle mobile menu"
+        ></button>
       </div>
     </div>
   </div>
@@ -96,9 +95,7 @@
   <nav class="mobile-menu" id="mobile-menu">
     <div class="mobile-menu__wrapper">
       <button class="mobile-menu__close" aria-label="Close mobile menu">
-        <svg class="mobile-menu__close-icon" aria-hidden="true">
-          <use href="/stp-8592/assets/sprite-d2ccddfb.svg#icon-cancel"></use>
-        </svg>
+        <span class="close-menu-icon"></span>
       </button>
 
       <ul class="mobile-menu__list">
@@ -330,7 +327,7 @@
 
       <button class="fashion-beauty__video-play" aria-label="Play video">
         <svg class="fashion-beauty__video-play-icon" aria-hidden="true">
-          <use href="/stp-8592/assets/sprite-d2ccddfb.svg#icon-play-btn"></use>
+          <use href="/stp-8592/assets/sprite-db1f8c19.svg#icon-play-btn"></use>
         </svg>
       </button>
 
@@ -358,8 +355,8 @@
 
   <div class="gallery-sw-container">
     <div class="gallery-swiper swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
+      <div class="swiper-wrapper gallery-sw-wr">
+        <div class="swiper-slide gallery-swiper-slide">
           <picture>
             <source
               srcset="/stp-8592/assets/01-a6d2f40f.jpg 1x, /stp-8592/assets/01@2x-79a069f8.jpg 2x"
@@ -376,7 +373,7 @@
             />
           </picture>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide gallery-swiper-slide">
           <picture>
             <source
               srcset="/stp-8592/assets/02-7bc6e9f8.jpg 1x, /stp-8592/assets/02@2x-7eb1c41e.jpg 2x"
@@ -412,16 +409,8 @@
         </div>
       </div>
     </div>
-    <button type="button" class="swiper-btn-prev btn-prev">
-      <svg width="36" height="36">
-        <use href="/stp-8592/assets/sprite-d2ccddfb.svg#icon-angle-left-b"></use>
-      </svg>
-    </button>
-    <button type="button" class="swiper-btn-next btn-next">
-      <svg width="36" height="36">
-        <use href="/stp-8592/assets/sprite-d2ccddfb.svg#icon-angle-left-b"></use>
-      </svg>
-    </button>
+    <button type="button" class="swiper-btn-prev btn-prev"></button>
+    <button type="button" class="swiper-btn-next btn-next"></button>
   </div>
 </section>
 
