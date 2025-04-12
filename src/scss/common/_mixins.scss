@@ -50,3 +50,37 @@
     line-height: $line-height;
   }
 }
+
+@mixin feature-icon($name, $fileName) {
+  .#{$name} {
+    @include background(
+      '../images/features/mobile/#{$fileName}.png',
+      top center,
+      20px 16px
+    );
+
+    @media screen and (min-resolution: 192dpi) {
+      @include background(
+        '../images/features/mobile/#{$fileName}@2x.png',
+        top center,
+        20px 16px
+      );
+    }
+
+    @include media(desktop) {
+      @include background(
+        '../images/features/desktop/#{$fileName}.png',
+        top center,
+        40px 35px
+      );
+
+      @media screen and (min-resolution: 192dpi) {
+        @include background(
+          '../images/features/desktop/#{$fileName}@2x.png',
+          top center,
+          40px 35px
+        );
+      }
+    }
+  }
+}

@@ -1,0 +1,186 @@
+.features {
+  padding-top: $section-paddings-mob;
+  padding-bottom: $section-paddings-mob;
+  @include background($bg-print-1x, center);
+  @media screen and (min-resolution: 192pdi) {
+    @include background($bg-print-2x, center);
+  }
+
+  @include media(desktop) {
+    padding-top: $section-paddings-des;
+    padding-bottom: $section-paddings-des;
+  }
+
+  .gradient-title {
+    @include font($fz24);
+    margin-bottom: $mg20;
+
+    @include media(desktop) {
+      @include font(36px);
+      margin-bottom: 56px;
+    }
+  }
+
+  .features-border {
+    max-width: 280px;
+    margin: 0 auto;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      right: -1px;
+      bottom: -1px;
+      border-radius: 5px;
+      background-image: $header-burger-icon;
+    }
+
+    @include media(desktop) {
+      max-width: 896px;
+
+      &::after {
+        border-radius: 20px;
+      }
+    }
+
+    .features-text-block {
+      padding: 20px 24px;
+      margin: 0 auto;
+      border-radius: 5px;
+      margin-bottom: $mg20;
+
+      position: relative;
+      z-index: 1;
+
+      @include background($bg-wavy-1x, center, 170%);
+      @media screen and (min-resolution: 192dpi) {
+        @include background($bg-wavy-2x, center, 170%);
+      }
+
+      @include media(desktop) {
+        padding: 40px 136px;
+        border-radius: 20px;
+        margin-bottom: 27px;
+
+        @include background($bg-wavy-1x, bottom 82% right 65%, 101%);
+        @media screen and (min-resolution: 192dpi) {
+          @include background($bg-wavy-2x, top right);
+        }
+      }
+
+      .gradient-subtitle {
+        @include font($fz20, $regular, 1.2);
+        margin-bottom: $mg12;
+
+        @include media(desktop) {
+          @include font($fz32);
+          margin-bottom: $mg24;
+        }
+      }
+
+      .features-text {
+        @include font($fz16, $regular, 1.38);
+
+        @include media(desktop) {
+          @include font($fz24);
+        }
+      }
+    }
+  }
+
+  .features-list {
+    width: 305px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    align-items: center;
+    column-gap: 8px;
+    row-gap: 20px;
+
+    @include media(desktop) {
+      width: 950px;
+      margin: 0 auto;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 0.5fr);
+      gap: 0;
+    }
+
+    .feature-item {
+      max-width: 132px;
+      padding-top: 20px;
+      margin: 0 auto;
+
+      @include media(desktop) {
+        max-width: 270px;
+        padding-top: 47px;
+      }
+
+      .feature {
+        .feature-bold {
+          font-weight: $bold;
+        }
+      }
+    }
+
+    .feature-item-img {
+      grid-area: 3/2/7/3;
+      @include media(desktop) {
+        grid-area: 1/2/4/3;
+      }
+      .feature-img {
+        width: 165px;
+        height: 291px;
+
+        @include media(desktop) {
+          width: 305px;
+          height: 535px;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .f-yellow {
+      grid-area: 2/1/4/2;
+      @include media(desktop) {
+        grid-area: 1/1/2/2;
+        max-width: 250px;
+      }
+    }
+
+    .f-green {
+      grid-area: 1/2/3/3;
+      @include media(desktop) {
+        grid-area: 1/3/2/4;
+        grid-column: 3;
+      }
+    }
+
+    .f-purple {
+      grid-area: 4/1/6/2;
+      @include media(desktop) {
+        grid-area: 2/1/3/2;
+      }
+    }
+
+    .f-pink {
+      grid-area: 6/1/8/2;
+      @include media(desktop) {
+        max-width: 330px;
+        grid-area: 4/2/5/3;
+      }
+    }
+
+    .f-blue {
+      grid-area: 7/2/9/3;
+      @include media(desktop) {
+        grid-area: 2/3/3/4;
+      }
+    }
+  }
+}
+
+@each $class, $file in $features {
+  @include feature-icon($class, $file);
+}
