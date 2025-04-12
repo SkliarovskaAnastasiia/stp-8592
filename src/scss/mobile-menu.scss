@@ -97,7 +97,12 @@
   }
 
   &__download-btn {
-    padding: $btn-paddings;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    padding: 12px 20px;
+    width: fit-content;
     border-radius: 16px;
     background: linear-gradient(180deg, #dbb9f8 0%, #cea2f6 100%);
     color: $main-color;
