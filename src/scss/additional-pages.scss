@@ -21,6 +21,16 @@
     align-items: center;
     column-gap: 8px;
 
+    .back-arrow {
+      width: 24px;
+      height: 24px;
+
+      @include background('../images/arrows/arrowLeft.png', center);
+      @media screen and (min-resolution: 192dpi) {
+        @include background('../images/arrows/arrowLeft@2x.png', center);
+      }
+    }
+
     .back-link-text {
       font-family: $first-f;
       @include font(14px, $regular, 2.14);
