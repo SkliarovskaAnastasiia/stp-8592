@@ -38,7 +38,7 @@ const swiper = new Swiper('.gallery-swiper', {
 });
 
 function updateActiveSlide(swiper) {
-  document.querySelectorAll('.swiper-slide').forEach((slide, index) => {
+  document.querySelectorAll('.gallery-swiper-slide').forEach((slide, index) => {
     slide.classList.toggle('active', index === swiper.realIndex);
   });
 }

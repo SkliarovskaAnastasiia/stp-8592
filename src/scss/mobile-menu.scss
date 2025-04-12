@@ -80,9 +80,13 @@
       z-index: -1;
     }
 
-    &-icon {
+    .close-menu-icon {
       width: 100%;
       height: 100%;
+      @include background('../images/header/mobile/cancel.png', center);
+      @media screen and (min-resolution: 192dpi) {
+        @include background('../images/header/mobile/cancel@2x.png', center);
+      }
     }
   }
 

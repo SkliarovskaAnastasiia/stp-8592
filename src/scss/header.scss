@@ -124,6 +124,8 @@
   }
 
   &__mobile-menu {
+    width: 39px;
+    height: 39px;
     display: flex;
     background: transparent;
     border: none;
@@ -131,9 +133,9 @@
     padding: 0;
     cursor: pointer;
 
-    &-icon {
-      width: 39px;
-      height: 39px;
+    @include background('../images/header/mobile/bars.png', center);
+    @media screen and (min-resolution: 192dpi) {
+      @include background('../images/header/mobile/bars@2x.png', center);
     }
 
     @include media(desktop) {
