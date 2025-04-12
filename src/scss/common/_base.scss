@@ -11,6 +11,23 @@ body {
   }
 }
 
+//Scroll with header fixed
+html {
+  scroll-behavior: smooth;
+}
+
+#home,
+#features,
+#gallery,
+#fashion-and-beauty,
+#how-it-all-started,
+#reviews {
+  scroll-margin-top: 56px;
+  @include media(desktop) {
+    scroll-margin-top: 106px;
+  }
+}
+
 .container {
   max-width: $mobile;
   margin: 0 auto;
