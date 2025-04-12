@@ -20,7 +20,9 @@
     }
   }
 
-  .gradient-title {
+  .gallery-title {
+    font-family: $second-f;
+    @include gradient-text($g-title);
     @include font($fz24);
     margin-bottom: $mg20;
 
@@ -39,7 +41,9 @@
       margin-bottom: 40px;
     }
 
-    .gradient-subtitle {
+    .gallery-subtitle {
+      font-family: $second-f;
+      @include gradient-text($g-subtitle);
       @include font($fz20);
       margin-bottom: 6.4px;
 

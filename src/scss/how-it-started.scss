@@ -14,6 +14,8 @@
   }
 
   .how-it-all-started-title {
+    font-family: $second-f;
+    @include gradient-text($g-title);
     @include font($fz24, $regular, normal, center);
     margin-bottom: 20px;
 
@@ -82,6 +84,8 @@
       }
 
       .how-it-all-started-subtitle {
+        font-family: $second-f;
+        @include gradient-text($g-subtitle);
         @include font($fz20, $regular, 1.2, center);
         margin-bottom: 12px;
 

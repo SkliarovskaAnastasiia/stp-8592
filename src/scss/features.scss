@@ -11,7 +11,9 @@
     padding-bottom: $section-paddings-des;
   }
 
-  .gradient-title {
+  .features-title {
+    font-family: $second-f;
+    @include gradient-text($g-title);
     @include font($fz24);
     margin-bottom: $mg20;
 
@@ -70,7 +72,9 @@
         }
       }
 
-      .gradient-subtitle {
+      .features-subtitle {
+        font-family: $second-f;
+        @include gradient-text($g-subtitle);
         @include font($fz20, $regular, 1.2);
         margin-bottom: $mg12;
 
@@ -91,12 +95,12 @@
   }
 
   .features-list {
-    width: 305px;
+    width: 300px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(8, 1fr);
     align-items: center;
-    column-gap: 8px;
+    // column-gap: 8px;
     row-gap: 20px;
 
     @include media(desktop) {
@@ -110,7 +114,7 @@
     .feature-item {
       max-width: 132px;
       padding-top: 20px;
-      margin: 0 auto;
+      // margin: 0 auto;
 
       @include media(desktop) {
         max-width: 270px;

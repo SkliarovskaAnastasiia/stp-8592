@@ -24,6 +24,7 @@
     .back-link-text {
       font-family: $first-f;
       @include font(14px, $regular, 2.14);
+      @include gradient-text($g-subtitle);
 
       @include media(desktop) {
         @include font($fz20, $regular, 1.5);
