@@ -100,8 +100,6 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(8, 1fr);
     align-items: center;
-    // column-gap: 8px;
-    // row-gap: 10px;
 
     @include media(desktop) {
       width: 950px;
