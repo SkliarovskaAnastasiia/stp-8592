@@ -4,10 +4,14 @@
     padding-right: 0px;
     padding-top: $section-paddings-mob;
     padding-bottom: $section-paddings-mob;
-
     @include background($bg-print-1x, center);
     @media screen and (min-resolution: 192dpi) {
       @include background($bg-print-2x, center);
+    }
+
+    @include media(desktop) {
+      padding-top: $section-paddings-des;
+      padding-bottom: $section-paddings-des;
     }
   }
 
@@ -16,6 +20,11 @@
     @include gradient-text($g-title);
     @include font($fz24, normal, 1.3, center);
     margin-bottom: $mg20;
+
+    @include media(desktop) {
+      @include font(36px, normal, 1.3, center);
+      margin-bottom: 56px;
+    }
   }
 
   &__text-block {
@@ -28,6 +37,11 @@
     justify-content: center;
     flex-direction: column;
 
+    @include media(desktop) {
+      margin-bottom: 0px;
+      border-radius: 20px;
+    }
+
     &::after {
       content: '';
       position: absolute;
@@ -35,13 +49,18 @@
       width: 100.7%;
       height: 101%;
       border-radius: 6px;
-
       background-image: linear-gradient(
         90deg,
         #592193 0%,
         #bb2fd0 50%,
         #592193 100%
       );
+
+      @include media(desktop) {
+        width: 82.6%;
+        height: 101.5%;
+        border-radius: 20px;
+      }
     }
 
     &-wr {
@@ -53,9 +72,11 @@
       }
 
       @include media(desktop) {
-        @include background($bg-wavy-1x, bottom 82% right 65%, 101%);
+        padding: 45px 135px;
+        border-radius: 20px;
+        @include background($bg-wavy-1x, bottom 72% right 56%, 142%);
         @media screen and (min-resolution: 192dpi) {
-          @include background($bg-wavy-2x, top right);
+          @include background($bg-wavy-2x, bottom 72% right 56%, 142%);
         }
       }
     }
@@ -65,18 +86,43 @@
       font-family: $second-f;
       @include gradient-text($g-subtitle);
       @include font($fz20, $regular, 1.2);
+
+      @include media(desktop) {
+        margin-bottom: 24px;
+        @include font(32px, $regular, 1.3);
+      }
     }
 
     &-text {
       font-family: $first-f;
       color: $main-color;
       @include font($fz16, $regular, 1.38);
+
+      @include media(desktop) {
+        width: 625px;
+        @include font(24px, $regular, 1.2);
+      }
     }
   }
 
   &__card {
+    margin-bottom: 16px;
+
+    @include media(desktop) {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      padding: 0px 149px;
+      display: flex;
+    }
+
     &-img-wr {
       margin-bottom: 8px;
+
+      @include media(desktop) {
+        flex-shrink: 0;
+        margin-bottom: 0px;
+        margin-right: 25px;
+      }
     }
 
     &-img {
@@ -84,13 +130,28 @@
       margin: 0 auto;
       width: 186px;
       height: 197px;
+
+      @include media(desktop) {
+        border-radius: 20px;
+        margin: 0;
+        width: 254px;
+        height: 280px;
+      }
     }
 
     &-review-wr {
-      margin-bottom: 16px;
       padding: 20px;
       border-radius: 4.96px;
       background: $pink;
+
+      @include media(desktop) {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0px;
+        padding: 46px 64px 46px 64px;
+        border-radius: 16px;
+        width: 624px;
+      }
 
       &::after {
         content: '';
@@ -104,6 +165,13 @@
         @media screen and (min-resolution: 192dpi) {
           @include background('../images/reviews/crystal@2x.png', center);
         }
+
+        @include media(desktop) {
+          width: 56px;
+          height: 46px;
+          bottom: 293px;
+          right: 129px;
+        }
       }
     }
 
@@ -112,22 +180,42 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 6px;
+
+      @include media(desktop) {
+        margin-bottom: 20px;
+      }
     }
 
     &-review-img-quote {
       width: 24px;
       height: 22px;
+
+      @include media(desktop) {
+        width: 42px;
+        height: 36px;
+      }
     }
 
     &-review-stars-list {
       display: flex;
       align-items: center;
+      justify-content: center;
       li {
         width: 16px;
         height: 16px;
         @include background($star, center, 35px 35px);
         @media screen and (min-resolution: 192dpi) {
           @include background($star-2x, center, 35px 35px);
+        }
+
+        @include media(desktop) {
+          width: 24px;
+          height: 24px;
+
+          @include background($star, center, 220%);
+          @media screen and (min-resolution: 192dpi) {
+            @include background($star-2x, center, 220%);
+          }
         }
       }
     }
@@ -137,6 +225,11 @@
       font-family: $first-f;
       color: $main-color;
       @include font(14px, $regular, 1.42);
+
+      @include media(desktop) {
+        margin-bottom: 24px;
+        @include font(20px, $regular, 1.2, start);
+      }
     }
 
     &-review-user-wr {
@@ -146,11 +239,19 @@
     &-review-user-name {
       font-family: $first-f;
       color: $main-color;
-
       @include font(12px, $regular, 1.2);
+
+      @include media(desktop) {
+        @include font(16px, $regular, 1.2);
+      }
+
       &::after {
         content: ',';
         margin-right: 4px;
+
+        @include media(desktop) {
+          @include font(16px, $regular, 1.2);
+        }
       }
     }
 
@@ -158,14 +259,45 @@
       font-family: $first-f;
       color: $main-color;
       @include font(12px, $regular, 1.2);
+
+      @include media(desktop) {
+        @include font(16px, $regular, 1.2);
+      }
     }
   }
 
   .swiper {
     &-button-prev,
     &-button-next {
+      width: 36px;
+      height: 36px;
+
+      &::after {
+        content: none;
+      }
+
       @media screen and (max-width: 1199px) {
         display: none;
+      }
+    }
+
+    &-button-prev {
+      left: 90px;
+      background-size: cover;
+      @include background('../images/arrows/arrowLeft.png', center);
+
+      @media screen and (min-resolution: 192dpi) {
+        @include background('../images/arrows/arrowLeft@2x.png', center);
+      }
+    }
+
+    &-button-next {
+      right: 90px;
+      background-size: cover;
+      @include background('../images/arrows/arrowRight.png', center);
+
+      @media screen and (min-resolution: 192dpi) {
+        @include background('../images/arrows/arrowRight@2x.png', center);
       }
     }
 
