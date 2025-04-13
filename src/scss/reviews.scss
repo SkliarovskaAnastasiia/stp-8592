@@ -74,9 +74,6 @@
     }
   }
 
-  &__swiper {
-  }
-
   &__card {
     &-img-wr {
       margin-bottom: 8px;
@@ -90,6 +87,7 @@
     }
 
     &-review-wr {
+      margin-bottom: 16px;
       padding: 20px;
       border-radius: 4.96px;
       background: $pink;
@@ -160,6 +158,51 @@
       font-family: $first-f;
       color: $main-color;
       @include font(12px, $regular, 1.2);
+    }
+  }
+
+  .swiper {
+    &-button-prev,
+    &-button-next {
+      @media screen and (max-width: 1199px) {
+        display: none;
+      }
+    }
+
+    &-pagination {
+      position: static;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+
+      &-bullet {
+        width: 24px;
+        height: 6px;
+        border-radius: 999px;
+        background: $pink;
+        transition: all 0.3s ease;
+        opacity: 1;
+
+        &-active {
+          width: 36px;
+          background: none;
+          background-color: none;
+          background-image: linear-gradient(
+            90deg,
+            #592193 0%,
+            #bb2fd0 50%,
+            #592193 100%
+          );
+          &:focus {
+            background-image: linear-gradient(
+              90deg,
+              #592193 0%,
+              #bb2fd0 50%,
+              #592193 100%
+            );
+          }
+        }
+      }
     }
   }
 }
