@@ -103,6 +103,9 @@
         width: 33px;
         height: 27px;
         @include background('../images/reviews/crystal.png', center);
+        @media screen and (min-resolution: 192dpi) {
+          @include background('../images/reviews/crystal@2x.png', center);
+        }
       }
     }
 
@@ -125,6 +128,9 @@
         width: 16px;
         height: 16px;
         @include background($star, center, 35px 35px);
+        @media screen and (min-resolution: 192dpi) {
+          @include background($star-2x, center, 35px 35px);
+        }
       }
     }
 
