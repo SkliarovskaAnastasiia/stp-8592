@@ -22,9 +22,10 @@
       href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/stp-8592/assets/vendor-1404f96d.js"></script>
-    <script type="module" crossorigin src="/stp-8592/assets/main-327efc2f.js"></script>
-    <link rel="stylesheet" href="/stp-8592/assets/main-e8d6930a.css">
+    <script type="module" crossorigin src="/stp-8592/assets/vendor-0d4ab8a2.js"></script>
+    <script type="module" crossorigin src="/stp-8592/assets/main-1b589f3d.js"></script>
+    <link rel="stylesheet" href="/stp-8592/assets/main-cb64ba89.css">
+    <link rel="stylesheet" href="/stp-8592/assets/vendor-0ded8c46.css">
   </head>
   <body>
     <header class="header">
@@ -416,25 +417,136 @@
 
     <section id="reviews" class="reviews">
   <div class="container reviews__wr">
-    <h2 class="reviews__title">Reviews & Community Engagement</h2>
-    <div class="reviews__text-block">
-      <div class="reviews__text-block-wr">
-        <h3 class="reviews__text-block-subtitle">
-          Join Thousands of Beauty Enthusiasts!
-        </h3>
-        <p class="reviews__text-block-text">
-          Don’t just take our word for it—see what players love about Makeover
-          Magic!
-        </p>
+    <div class="container">
+      <h2 class="reviews__title">Reviews & Community Engagement</h2>
+      <div class="reviews__text-block">
+        <div class="reviews__text-block-wr">
+          <h3 class="reviews__text-block-subtitle">
+            Join Thousands of Beauty Enthusiasts!
+          </h3>
+          <p class="reviews__text-block-text">
+            Don’t just take our word for it—see what players love about Makeover
+            Magic!
+          </p>
+        </div>
       </div>
     </div>
     <div class="reviews__swiper swiper">
       <div class="swiper-wrapper">
         <!-- Slides -->
-        <div class="swiper-slide"></div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        ...
+        <div class="swiper-slide">
+          <div class="reviews__card container">
+            <div class="reviews__card-img-wr">
+              <img
+                src="/stp-8592/assets/per-1-c9aec123.jpg"
+                srcset="/stp-8592/assets/per-1-c9aec123.jpg 1x, /stp-8592/assets/per-1@2x-66f39371.jpg 2x"
+                alt="Picture of a player"
+                class="reviews__card-img"
+              />
+            </div>
+            <div class="reviews__card-review-wr">
+              <div class="reviews__card-review-imgs">
+                <img
+                  src="data:image/png;base64,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"
+                  srcset="data:image/png;base64,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 1x, /stp-8592/assets/quotation@2x-86b07f17.png 2x"
+                  alt="Decorative quotes"
+                  class="reviews__card-review-img-quote"
+                />
+                <ul class="reviews__card-review-stars-list">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+              <p class="reviews__card-review-text">
+                This game is absolutely addictive! The match-3 puzzles are fun,
+                and the transformations are stunning!
+              </p>
+              <div class="reviews__card-review-user-wr">
+                <span class="reviews__card-review-user-name">Sophie</span>
+                <span class="reviews__card-review-user-age">27</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="reviews__card container">
+            <div class="reviews__card-img-wr">
+              <img
+                src="/stp-8592/assets/per-2-95c7ea9e.jpg"
+                srcset="/stp-8592/assets/per-2-95c7ea9e.jpg 1x, /stp-8592/assets/per-2@2x-db48a645.jpg 2x"
+                alt="Picture of a player"
+                class="reviews__card-img"
+              />
+            </div>
+            <div class="reviews__card-review-wr">
+              <div class="reviews__card-review-imgs">
+                <img
+                  src="data:image/png;base64,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"
+                  srcset="data:image/png;base64,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 1x, /stp-8592/assets/quotation@2x-86b07f17.png 2x"
+                  alt="Decorative quotes"
+                  class="reviews__card-review-img-quote"
+                />
+                <ul class="reviews__card-review-stars-list">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+              <p class="reviews__card-review-text">
+                As a makeup artist, I LOVE how real the styles look! The
+                mechanics are super satisfying!
+              </p>
+              <div class="reviews__card-review-user-wr">
+                <span class="reviews__card-review-user-name">Jessica</span>
+                <span class="reviews__card-review-user-age">29</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="reviews__card container">
+            <div class="reviews__card-img-wr">
+              <img
+                src="/stp-8592/assets/per-3-cfe2f391.jpg"
+                srcset="/stp-8592/assets/per-3-cfe2f391.jpg 1x, /stp-8592/assets/per-3@2x-a3a5b064.jpg 2x"
+                alt="Picture of a player"
+                class="reviews__card-img"
+              />
+            </div>
+            <div class="reviews__card-review-wr">
+              <div class="reviews__card-review-imgs">
+                <img
+                  src="data:image/png;base64,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"
+                  srcset="data:image/png;base64,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 1x, /stp-8592/assets/quotation@2x-86b07f17.png 2x"
+                  alt="Decorative quotes"
+                  class="reviews__card-review-img-quote"
+                />
+                <ul class="reviews__card-review-stars-list">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+              <p class="reviews__card-review-text">
+                I never get bored! There’s always a new challenge, and the
+                customization is amazing!
+              </p>
+              <div class="reviews__card-review-user-wr">
+                <span class="reviews__card-review-user-name">Emily</span>
+                <span class="reviews__card-review-user-age">22</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- If we need pagination -->
       <div class="swiper-pagination"></div>
