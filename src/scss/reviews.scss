@@ -1,5 +1,7 @@
 .reviews {
   &__wr {
+    padding-left: 0px;
+    padding-right: 0px;
     padding-top: $section-paddings-mob;
     padding-bottom: $section-paddings-mob;
 
@@ -17,22 +19,23 @@
   }
 
   &__text-block {
+    margin-bottom: $mg20;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    z-index: 0;
-    margin-bottom: $mg20;
-    border-radius: 5px;
+    flex-direction: column;
 
     &::after {
       content: '';
       position: absolute;
-      width: 100.7%;
-      height: 101%;
-
       z-index: -1;
-      border-radius: 5.5px;
+      width: 100.8%;
+      height: 101.5%;
+      border-radius: 6px;
+
       background-image: linear-gradient(
         90deg,
         #592193 0%,
@@ -70,6 +73,87 @@
       @include font($fz16, $regular, 1.38);
     }
   }
+
   &__swiper {
+  }
+
+  &__card {
+    &-img-wr {
+      margin-bottom: 8px;
+    }
+
+    &-img {
+      border-radius: 5px;
+      margin: 0 auto;
+      width: 186px;
+      height: 197px;
+    }
+
+    &-review-wr {
+      padding: 20px;
+      border-radius: 4.96px;
+      background: $pink;
+
+      &::after {
+        content: '';
+        bottom: 136px;
+        right: 6px;
+        position: absolute;
+        z-index: 100;
+        width: 33px;
+        height: 27px;
+        @include background('../images/reviews/crystal.png', center);
+      }
+    }
+
+    &-review-imgs {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    &-review-img-quote {
+      width: 24px;
+      height: 22px;
+    }
+
+    &-review-stars-list {
+      display: flex;
+      align-items: center;
+      li {
+        width: 16px;
+        height: 16px;
+        @include background($star, center, 35px 35px);
+      }
+    }
+
+    &-review-text {
+      margin-bottom: 7px;
+      font-family: $first-f;
+      color: $main-color;
+      @include font(14px, $regular, 1.42);
+    }
+
+    &-review-user-wr {
+      display: flex;
+    }
+
+    &-review-user-name {
+      font-family: $first-f;
+      color: $main-color;
+
+      @include font(12px, $regular, 1.2);
+      &::after {
+        content: ',';
+        margin-right: 4px;
+      }
+    }
+
+    &-review-user-age {
+      font-family: $first-f;
+      color: $main-color;
+      @include font(12px, $regular, 1.2);
+    }
   }
 }
