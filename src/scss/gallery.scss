@@ -79,7 +79,6 @@
       .gallery-sw-wr {
         display: flex;
         align-items: center;
-        gap: 13px;
         position: relative;
 
         @include media(desktop) {
