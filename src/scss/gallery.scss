@@ -2,10 +2,10 @@
   padding-top: $section-paddings-mob;
   padding-bottom: $section-paddings-mob;
 
-  @include background($bg-gradient-1x, top);
+  @include background($bg-gradient-1x, center);
 
   @media screen and (min-resolution: 192dpi) {
-    @include background($bg-gradient-2x, top);
+    @include background($bg-gradient-2x, center);
   }
 
   @include media(desktop) {
