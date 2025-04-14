@@ -69,8 +69,8 @@ $mg32: 32px;
 // Backgrounds
 $bg-print-1x: '../images/backgrounds/desktop/01.jpg';
 $bg-print-2x: '../images/backgrounds/desktop/01@2x.jpg';
-$bg-gradient-1x: '../images/backgrounds/desktop/02.jpg';
-$bg-gradient-2x: '../images/backgrounds/desktop/02@2x.jpg';
+$bg-gradient-1x: linear-gradient(180deg, #fff 0%, #f3e1ff 50%, #e6c3ff 100%);
+$bg-gradient-2x: linear-gradient(180deg, #fff 0%, #f3e1ff 50%, #e6c3ff 100%);
 $bg-wavy-1x: '../images/backgrounds/desktop/03.jpg';
 $bg-wavy-2x: '../images/backgrounds/desktop/03@2x.jpg';
 $star: '../images/reviews/star.png';
