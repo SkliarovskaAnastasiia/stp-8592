@@ -73,6 +73,7 @@
   }
 
   &__subtitle {
+    margin-bottom: 12px;
     font-family: $second-f;
     @include font($fz20, $regular, 1.5, center);
     @include gradient-text($g-subtitle);
