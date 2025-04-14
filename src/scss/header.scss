@@ -95,30 +95,31 @@
 
   &__nav-list {
     display: none;
-    display: flex;
-    gap: $mg24;
+
+    @include media(desktop) {
+      display: flex;
+      gap: $mg24;
+    }
   }
 
   &__nav-item {
     text-align: center;
 
     &-text {
-      display: inline-block;
-      transition: transform 0.2s ease;
-
-      &:hover,
-      &:focus,
-      &:active {
-        transform: scale(1.04);
-        @include gradient-text(
-          linear-gradient(90deg, #592193 0%, #bb2fd0 50%, #592193 100%)
-        );
-      }
-
       @include media(desktop) {
+        transition: transform 0.2s ease;
         color: $main-color;
         font-family: $first-f;
         @include font($fz16, $regular, 1.5, center);
+
+        &:hover,
+        &:focus,
+        &:active {
+          transform: scale(1.04);
+          @include gradient-text(
+            linear-gradient(90deg, #592193 0%, #bb2fd0 50%, #592193 100%)
+          );
+        }
       }
     }
   }
