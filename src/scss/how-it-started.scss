@@ -37,10 +37,12 @@
     }
 
     .how-it-started-img {
+      width: 186px;
       border-radius: 24px;
       margin: 0 auto;
 
       @include media(desktop) {
+        width: 372px;
         border-radius: 100px;
         margin: 0;
       }
@@ -51,16 +53,16 @@
       margin: 0 auto;
 
       @include background(
-        '../images/how-it-started/mobile/diamond.png',
-        top 10px right 0,
-        auto
+        '../images/how-it-started/diamond.png',
+        top 20px right 12px,
+        14%
       );
 
       @media screen and (min-resolution: 192dpi) {
         @include background(
-          '../images/how-it-started/mobile/diamond@2x.png',
-          top 10px right 0,
-          23%
+          '../images/how-it-started/diamond@2x.png',
+          top 20px right 12px,
+          14%
         );
       }
 
@@ -69,14 +71,14 @@
         margin: 0;
 
         @include background(
-          '../images/how-it-started/desktop/diamond.png',
+          '../images/how-it-started/diamond.png',
           top 20px right,
           14%
         );
 
         @media screen and (min-resolution: 192dpi) {
           @include background(
-            '../images/how-it-started/desktop/diamond@2x.png',
+            '../images/how-it-started/diamond@2x.png',
             top 20px right,
             14%
           );

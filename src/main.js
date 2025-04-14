@@ -1,5 +1,3 @@
-import '../src/scss/styles.scss';
-
 import './js/mobile-menu';
 import './js/gallery';
 import './js/fashion-and-beauty';
