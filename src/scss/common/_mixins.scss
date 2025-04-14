@@ -20,8 +20,15 @@
   text-align: $text-align;
 }
 
-@mixin background($url, $position, $size: cover) {
-  background-image: url($url);
+@mixin background($bg, $position, $size: cover) {
+  @if str-index($bg, 'url(') {
+    background-image: $bg;
+  } @else if str-index($bg, 'gradient(') {
+    background-image: $bg;
+  } @else {
+    background-image: url(#{$bg});
+  }
+
   background-position: $position;
   background-size: $size;
   background-repeat: no-repeat;
