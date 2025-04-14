@@ -1,13 +1,15 @@
 // Common styles for all pages
 .page-header {
   position: relative;
-
   z-index: 1;
-
   position: fixed;
   top: 12px;
   left: 50%;
   transform: translateX(-50%);
+
+  @include media(desktop) {
+    top: 20px;
+  }
 
   &::after {
     content: '';
