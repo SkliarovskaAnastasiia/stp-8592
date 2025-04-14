@@ -99,23 +99,28 @@
     @include media(desktop) {
       display: flex;
       gap: $mg24;
-      color: $main-color;
-      font-family: $first-f;
-      @include font($fz16, $regular, 1.5, center);
     }
   }
 
   &__nav-item {
     text-align: center;
-    transition: transform 0.3s ease-in-out;
 
-    &:hover,
-    &:focus,
-    &:active {
-      transform: scale(1.03);
-      @include gradient-text(
-        linear-gradient(90deg, #592193 0%, #bb2fd0 50%, #592193 100%)
-      );
+    &-text {
+      @include media(desktop) {
+        transition: transform 0.2s ease;
+        color: $main-color;
+        font-family: $first-f;
+        @include font($fz16, $regular, 1.5, center);
+
+        &:hover,
+        &:focus,
+        &:active {
+          transform: scale(1.04);
+          @include gradient-text(
+            linear-gradient(90deg, #592193 0%, #bb2fd0 50%, #592193 100%)
+          );
+        }
+      }
     }
   }
 
