@@ -9,6 +9,8 @@ import { Navigation, Pagination } from 'swiper/modules';
 const swiper = new Swiper('.reviews__swiper', {
   modules: [Navigation, Pagination],
 
+  speed: 1000,
+
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',

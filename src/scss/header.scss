@@ -6,7 +6,7 @@
   z-index: 100;
 
   @include media(desktop) {
-    top: 40px;
+    top: 20px;
   }
 
   &__container {
@@ -69,6 +69,13 @@
     height: 55px;
     border-radius: 8.44px;
     overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover,
+    &:focus,
+    &:active {
+      transform: scale(1.03);
+    }
 
     @include media(desktop) {
       width: 69px;
@@ -100,6 +107,16 @@
 
   &__nav-item {
     text-align: center;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover,
+    &:focus,
+    &:active {
+      transform: scale(1.03);
+      @include gradient-text(
+        linear-gradient(90deg, #592193 0%, #bb2fd0 50%, #592193 100%)
+      );
+    }
   }
 
   &__btn-download {
