@@ -31,9 +31,9 @@
     &::after {
       content: '';
       position: absolute;
-      top: -1px;
+      top: -0.8px;
       left: -1px;
-      right: -1px;
+      right: -1.1px;
       bottom: -1px;
       border-radius: 5px;
       background-image: $header-burger-icon;
