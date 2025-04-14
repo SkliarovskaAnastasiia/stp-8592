@@ -11,7 +11,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: cover;
+    background-size: 100% 100%;
     transform: rotate(180deg);
     z-index: -1;
     @include background($bg-gradient-1x, center);
