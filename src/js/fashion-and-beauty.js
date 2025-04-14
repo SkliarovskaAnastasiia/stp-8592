@@ -23,6 +23,8 @@ videoContainers.forEach(container => {
     refs.button.style.display = 'none';
     refs.iframe.style.display = 'block';
     refs.overlay.hidden = false;
+
+    refs.timeoutId = setTimeout(stopVideo, 36000);
   };
 
   const stopVideo = () => {
