@@ -6,7 +6,7 @@ videoContainers.forEach(container => {
     thumb: container.querySelector('.fashion-beauty__video-thumb'),
     button: container.querySelector('.fashion-beauty__video-play'),
     iframe: container.querySelector('.fashion-beauty__video-iframe'),
-    overlay: container.querySelector('.fashion-beauty__video-overlay'),
+    // overlay: container.querySelector('.fashion-beauty__video-overlay'),
     baseSrc: container
       .querySelector('.fashion-beauty__video-iframe')
       .getAttribute('src'),
@@ -22,7 +22,7 @@ videoContainers.forEach(container => {
     refs.thumb.style.display = 'none';
     refs.button.style.display = 'none';
     refs.iframe.style.display = 'block';
-    refs.overlay.hidden = false;
+    // refs.overlay.hidden = false;
 
     refs.timeoutId = setTimeout(stopVideo, 35000);
   };
@@ -33,10 +33,10 @@ videoContainers.forEach(container => {
     refs.iframe.style.display = 'none';
     refs.thumb.style.display = '';
     refs.button.style.display = '';
-    refs.overlay.hidden = true;
+    // refs.overlay.hidden = true;
   };
 
   refs.thumb.addEventListener('click', playVideo);
   refs.button.addEventListener('click', playVideo);
-  refs.overlay.addEventListener('click', stopVideo);
+  // refs.overlay.addEventListener('click', stopVideo);
 });
