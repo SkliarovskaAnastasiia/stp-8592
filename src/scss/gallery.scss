@@ -100,7 +100,7 @@
             transition: width 0.5s linear;
           }
 
-          &.active {
+          &.swiper-slide-active {
             filter: none;
             width: 183px !important;
             height: 236px !important;

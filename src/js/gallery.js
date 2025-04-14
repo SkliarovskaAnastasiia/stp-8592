@@ -5,9 +5,9 @@ const swiper = new Swiper('.gallery-swiper', {
   speed: 800,
   breakpoints: {
     320: {
-      spaceBetween: 24,
+      spaceBetween: 12,
       slidesPerView: 'auto',
-      slidesOffsetBefore: -24,
+      slidesOffsetBefore: -12,
     },
     1200: {
       slidesPerView: 3,
@@ -29,21 +29,13 @@ const swiper = new Swiper('.gallery-swiper', {
   },
   on: {
     slideChange() {
-      updateActiveSlide(this);
       HandleBtnClick(this, false);
     },
     init() {
-      updateActiveSlide(this);
       HandleBtnClick(this, true);
     },
   },
 });
-
-function updateActiveSlide(swiper) {
-  document.querySelectorAll('.gallery-swiper-slide').forEach((slide, index) => {
-    slide.classList.toggle('active', index === swiper.realIndex);
-  });
-}
 
 function HandleBtnClick(swiper, isInit) {
   const btnNext = document.querySelector('.swiper-btn-next');
