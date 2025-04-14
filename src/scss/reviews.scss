@@ -57,9 +57,9 @@
       );
 
       @include media(desktop) {
-        width: 82.6%;
-        height: 101.5%;
-        border-radius: 20px;
+        width: 82.5%;
+        height: 101.2%;
+        border-radius: 22px;
       }
     }
 
@@ -224,7 +224,7 @@
       margin-bottom: 7px;
       font-family: $first-f;
       color: $main-color;
-      @include font(14px, $regular, 1.42);
+      @include font(14px, $regular, 1.42, start);
 
       @include media(desktop) {
         margin-bottom: 24px;
