@@ -123,12 +123,10 @@
   &__video {
     position: relative;
     border-radius: 6px;
-    overflow: hidden;
     aspect-ratio: 337/155;
 
     @include media(desktop) {
       border-radius: 20px;
-      // aspect-ratio: 543/250;
     }
 
     &-iframe {
@@ -141,16 +139,25 @@
 
     &-thumb {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       border-radius: 6px;
-
-      z-index: 1;
-      display: block;
       width: 100%;
       height: 100%;
-      object-fit: cover;
       cursor: pointer;
+
+      @include media(desktop) {
+        border-radius: 20px;
+      }
+
+      img {
+        border-radius: inherit;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; // makes sure the image scales nicely inside
+        display: block;
+      }
     }
 
     &-wr {

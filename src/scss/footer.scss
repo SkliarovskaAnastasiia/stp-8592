@@ -39,6 +39,18 @@
     @include media(desktop) {
       @include font(20px);
     }
+
+    &-item {
+      transition: transform 0.3s ease-in-out;
+      &:hover,
+      &:focus,
+      &:active {
+        // transform: scale(1.03);
+        @include gradient-text(
+          linear-gradient(90deg, #592193 0%, #bb2fd0 50%, #592193 100%)
+        );
+      }
+    }
   }
 
   .copyright-text {
