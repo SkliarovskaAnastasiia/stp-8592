@@ -6,7 +6,7 @@ const swiper = new Swiper('.gallery-swiper', {
   breakpoints: {
     320: {
       spaceBetween: 12,
-      slidesPerView: 'auto',
+      slidesPerView: 2.14,
       slidesOffsetBefore: -12,
     },
     1200: {
