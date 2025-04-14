@@ -2,7 +2,7 @@ import Swiper from 'swiper';
 
 const swiper = new Swiper('.gallery-swiper', {
   centeredSlides: true,
-  speed: 600,
+  speed: 800,
   breakpoints: {
     320: {
       spaceBetween: 12,

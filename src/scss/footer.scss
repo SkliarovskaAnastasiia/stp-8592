@@ -16,9 +16,14 @@
     width: fit-content;
     display: block;
     margin: 0 auto 20px;
+    transition: transform 0.3s ease-in-out;
 
     @include media(desktop) {
       margin-bottom: 32px;
+      &:hover,
+      &:focus {
+        transform: scale(1.03);
+      }
     }
   }
 
