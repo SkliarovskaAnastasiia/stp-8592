@@ -5,6 +5,10 @@
   left: 0;
   z-index: 100;
 
+  @include media(desktop) {
+    top: 40px;
+  }
+
   &__container {
     max-width: $mobile;
     margin: 0 auto;
