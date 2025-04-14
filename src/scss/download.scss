@@ -1,0 +1,167 @@
+.download {
+  padding-top: $section-paddings-mob;
+  padding-bottom: 125px;
+
+  background-image: url(../images/download/mobile/left.png),
+    url(../images/download/mobile/right.png), url($bg-wavy-1x);
+  background-position: left bottom, right bottom, center center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 100px 129px, 100px 129px, cover;
+
+  @media screen and (min-resolution: 192dpi) {
+    background-image: url(../images/download/mobile/left@2x.png),
+      url(../images/download/mobile/right@2x.png), url($bg-wavy-2x);
+    background-position: left bottom, right bottom, center center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 100px 129px, 100px 129px, cover;
+  }
+
+  @include media(desktop) {
+    padding-top: $section-paddings-des;
+    padding-bottom: 110px;
+
+    background-image: url(../images/download/desktop/left.png),
+      url(../images/download/desktop/right.png), url($bg-wavy-1x);
+    background-position: 40px 138px, 930px 138px, center center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 235px 302px, 235px 302px, cover;
+
+    @media screen and (min-resolution: 192dpi) {
+      background-image: url(../images/download/desktop/left@2x.png),
+        url(../images/download/desktop/right@2x.png), url($bg-wavy-2x);
+      background-position: 40px 138px, 930px 138px, center center;
+      background-repeat: no-repeat, no-repeat, no-repeat;
+      background-size: 235px 302px, 235px 302px, cover;
+    }
+  }
+
+  &__text {
+    &-wrapper {
+      margin-bottom: 20px;
+
+      @include media(desktop) {
+        margin-bottom: 55px;
+      }
+    }
+
+    &-title {
+      width: 99%;
+      margin-bottom: 8px;
+      font-family: $second-f;
+      @include gradient-text($g-title);
+      @include font(20px, $regular, 1.2, center);
+
+      @include media(desktop) {
+        margin-bottom: 24px;
+        @include font(32px, $regular, 1.2, center);
+      }
+    }
+
+    &-desc {
+      font-family: $first-f;
+      color: $main-color;
+      @include font(16px, $regular, 1.38, center);
+
+      @include media(desktop) {
+        margin: 0 auto;
+        width: 61%;
+        @include font(24px, $regular, 1.2, center);
+      }
+    }
+  }
+
+  // Button Wrapper
+  &__btn-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 101.5%;
+      height: 104%;
+      border-radius: 4px;
+      background-image: $google-btn-bg-border;
+
+      @include media(desktop) {
+        width: 102.2%;
+        height: 106.5%;
+        border-radius: 9px;
+      }
+    }
+  }
+
+  // Download Button
+  &__btn-download {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 11px;
+    border-radius: 4px;
+    width: fit-content;
+    background-image: $google-btn-bg;
+    cursor: pointer;
+    z-index: 1;
+    transition: background 0.3s ease;
+
+    @include media(desktop) {
+      padding: 11px 15px;
+      border-radius: 9px;
+    }
+
+    &:hover {
+      background-image: $google-btn-bg-hover;
+    }
+
+    &:active {
+      background-image: $google-btn-bg-active;
+    }
+
+    // Button Icon
+    &-icon {
+      width: 25px;
+      height: 29px;
+      margin-bottom: 2px;
+      margin-right: 9px;
+      @include media(desktop) {
+        width: 34.148px;
+        height: 38.612px;
+        margin-right: 12px;
+      }
+    }
+
+    // Button Text Wrapper
+    &-text-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-self: start;
+    }
+
+    // Button Label
+    &-label {
+      width: 43px;
+      height: 7px;
+      margin-bottom: 4.5px;
+      @include media(desktop) {
+        width: 57.5px;
+        height: 9.3px;
+        margin-bottom: 6px;
+      }
+    }
+
+    // Button Brand
+    &-brand {
+      width: 94px;
+      height: 19px;
+      @include media(desktop) {
+        width: 125.333px;
+        height: 25.35px;
+      }
+    }
+  }
+}
