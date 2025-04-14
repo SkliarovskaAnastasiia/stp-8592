@@ -104,22 +104,26 @@
 
   &__nav-item {
     text-align: center;
+    transform-origin: center center;
+    transition: transform 0.2s ease;
+    &:hover,
+    &:focus,
+    &:active {
+      transform: scale(1.04);
+    }
 
     &-text {
+      &:hover,
+      &:focus,
+      &:active {
+        @include gradient-text(
+          linear-gradient(90deg, #592193 0%, #bb2fd0 50%, #592193 100%)
+        );
+      }
       @include media(desktop) {
-        transition: transform 0.2s ease;
         color: $main-color;
         font-family: $first-f;
         @include font($fz16, $regular, 1.5, center);
-
-        &:hover,
-        &:focus,
-        &:active {
-          transform: scale(1.04);
-          @include gradient-text(
-            linear-gradient(90deg, #592193 0%, #bb2fd0 50%, #592193 100%)
-          );
-        }
       }
     }
   }
