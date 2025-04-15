@@ -44,8 +44,8 @@
     .gallery-subtitle {
       font-family: $second-f;
       @include gradient-text($g-subtitle);
-      @include font($fz20);
-      margin-bottom: 6.4px;
+      @include font($fz20, $regular, 1.2);
+      margin-bottom: 12px;
 
       @include media(desktop) {
         @include font($fz32);

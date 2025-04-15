@@ -46,7 +46,7 @@
 
     &-title {
       width: 99%;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
       font-family: $second-f;
       @include gradient-text($g-title);
       @include font(20px, $regular, 1.2, center);
